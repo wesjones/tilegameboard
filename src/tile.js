@@ -14,12 +14,13 @@ define('tile', ['resolve'], function(resolve) {
         return newType || currentType;
     }
 
-    function Tile(containerEl, x, y, typePath) {
+    function Tile(containerEl, x, y, typePath, dispatcher) {
         var el = document.createElement('div');
         var data = '';
         var classList = ['tile'];
         var res;
 
+        this.el = el;
         this.data = function (d) {
             if (d !== undefined) {
                 var r = resolve(d);
@@ -38,8 +39,8 @@ define('tile', ['resolve'], function(resolve) {
             var str = classList.join(' ');
             if (el.className !== str) {
                 el.className = str;
+                dispatcher.dispatch(dispatcher.events.TILE_RENDER_CHANGE, this, r, c);
             }
-            el.innerHTML = c + ":" + r;
         };
 
         containerEl.appendChild(el);
@@ -50,8 +51,8 @@ define('tile', ['resolve'], function(resolve) {
     }
 
     return {
-        create: function(containerEl, x, y, typePath) {
-            return new Tile(containerEl, x, y, typePath);
+        create: function(containerEl, x, y, typePath, dispatcher) {
+            return new Tile(containerEl, x, y, typePath, dispatcher);
         }
     };
 });

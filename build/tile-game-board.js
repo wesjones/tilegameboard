@@ -80,11 +80,12 @@
             }
             return newType || currentType;
         }
-        function Tile(containerEl, x, y, typePath) {
+        function Tile(containerEl, x, y, typePath, dispatcher) {
             var el = document.createElement("div");
             var data = "";
             var classList = [ "tile" ];
             var res;
+            this.el = el;
             this.data = function(d) {
                 if (d !== undefined) {
                     var r = resolve(d);
@@ -101,8 +102,8 @@
                 var str = classList.join(" ");
                 if (el.className !== str) {
                     el.className = str;
+                    dispatcher.dispatch(dispatcher.events.TILE_RENDER_CHANGE, this, r, c);
                 }
-                el.innerHTML = c + ":" + r;
             };
             containerEl.appendChild(el);
             this.render();
@@ -111,15 +112,22 @@
             el.style.top = y * s + "px";
         }
         return {
-            create: function(containerEl, x, y, typePath) {
-                return new Tile(containerEl, x, y, typePath);
+            create: function(containerEl, x, y, typePath, dispatcher) {
+                return new Tile(containerEl, x, y, typePath, dispatcher);
             }
         };
     });
     //! src/gameBoard.js
     define("gameBoard", [ "dispatcher", "tile", "getDistance", "getAngle", "getPointOnCircle" ], function(dispatcher, tile, getDistance, getAngle, getPointOnCircle) {
-        function GameBoard2d(el, viewWidth, viewHeight, boardData, tileTypePath) {
+        var events = {
+            TILE_RENDER_CHANGE: "tile-render-change",
+            AFTER_KEEP_IN_BOUNDS: "after-keep-in-bounds",
+            BEFORE_RENDER: "before-render",
+            AFTER_RENDER: "after-render"
+        };
+        function TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath) {
             var self = this;
+            self.events = events;
             var target;
             var viewOffset = {
                 x: -1,
@@ -141,7 +149,7 @@
                 for (var x = 0; x < vw; x += 1) {
                     tiles[x] = tiles[x] || [];
                     for (var y = 0; y < vh; y += 1) {
-                        tiles[x][y] = tiles[x][y] || tile.create(viewEl, x, y, tileTypePath);
+                        tiles[x][y] = tiles[x][y] || tile.create(viewEl, x, y, tileTypePath, self);
                         fn(tiles[x][y], x, y, dataOffsetPoint);
                     }
                 }
@@ -161,7 +169,7 @@
                 }, xdif, ydif, ox = 0, oy = 0, rx, ry, vx, vy, result;
                 if (target) {
                     var touchingTiles = keepInBounds(target);
-                    self.dispatch("after-keep-in-bounds", touchingTiles);
+                    self.dispatch(events.AFTER_KEEP_IN_BOUNDS, touchingTiles);
                     rx = target.x % 1 || 0;
                     ry = target.y % 1 || 0;
                     offPoint.x = Math.floor(target.x) - padX;
@@ -237,13 +245,13 @@
                 return result;
             }
             function render(targetX, targetY) {
-                self.dispatch("before-render");
+                self.dispatch(events.BEFORE_RENDER);
                 var dataOffsetPoint = updateTarget();
                 var ox = (viewOffset.x - dataOffsetPoint.vx) * tileSize;
                 var oy = (viewOffset.y - dataOffsetPoint.vy) * tileSize;
                 viewEl.style.transform = "translate(" + ox + "px, " + oy + "px)";
                 eachTile(renderTile, dataOffsetPoint);
-                self.dispatch("after-render");
+                self.dispatch(events.AFTER_RENDER);
             }
             function createTiles() {
                 eachTile(renderTile);
@@ -268,8 +276,9 @@
             dispatcher(this);
             createTiles();
         }
+        exports.events = events;
         exports.create = function(el, viewWidth, viewHeight, boardData, tileTypePath) {
-            return new GameBoard2d(el, viewWidth, viewHeight, boardData, tileTypePath);
+            return new TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath);
         };
         exports.getDistance = getDistance;
         exports.getAngle = getAngle;

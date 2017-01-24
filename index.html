@@ -76,10 +76,10 @@
 
     board.addItem(player);
     board.setTarget(player);
-    board.on('before-render', function(evt) {
+    board.on(tileBoard.events.BEFORE_RENDER, function(evt) {
 
     });
-    board.on('after-keep-in-bounds', function(event, touchingTiles) {
+    board.on(tileBoard.events.AFTER_KEEP_IN_BOUNDS, function(event, touchingTiles) {
         for(var i = 0; i < touchingTiles.length; i += 1) {
             var tile = touchingTiles[i];
             if (tile.tile.type === "r") {// we have moved into a square that is not permitted. Push away.
@@ -89,8 +89,11 @@
             }
         }
     });
-    board.on('after-render', function(evt) {
+    board.on(tileBoard.events.AFTER_RENDER, function(evt) {
         // do something after the render is done... pick up tools, add classes to player, etc.
+    });
+    board.on(tileBoard.events.TILE_RENDER_CHANGE, function(evt, tile, row, col) {
+        tile.el.innerHTML = 'R:' + row + " C:" + col;
     });
 
     start();

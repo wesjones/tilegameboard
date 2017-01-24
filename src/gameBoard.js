@@ -1,6 +1,15 @@
 define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointOnCircle'], function (dispatcher, tile, getDistance, getAngle, getPointOnCircle) {
-    function GameBoard2d(el, viewWidth, viewHeight, boardData, tileTypePath) {
+
+    var events = {
+        TILE_RENDER_CHANGE: 'tile-render-change',
+        AFTER_KEEP_IN_BOUNDS: 'after-keep-in-bounds',
+        BEFORE_RENDER: 'before-render',
+        AFTER_RENDER: 'after-render'
+    };
+
+    function TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath) {
         var self = this;
+        self.events = events;
         var target;
         var viewOffset = {x:-1, y:-1};
         var tiles = [];
@@ -20,7 +29,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             for (var x = 0; x < vw; x += 1) {
                 tiles[x] = tiles[x] || [];
                 for (var y = 0; y < vh; y += 1) {
-                    tiles[x][y] = tiles[x][y] || tile.create(viewEl, x, y, tileTypePath);
+                    tiles[x][y] = tiles[x][y] || tile.create(viewEl, x, y, tileTypePath, self);
                     fn(tiles[x][y], x, y, dataOffsetPoint);
                 }
             }
@@ -40,7 +49,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             var offPoint = {x:0, y:0}, xdif, ydif, ox = 0, oy = 0, rx, ry, vx, vy, result;
             if (target) {
                 var touchingTiles = keepInBounds(target);
-                self.dispatch('after-keep-in-bounds', touchingTiles);
+                self.dispatch(events.AFTER_KEEP_IN_BOUNDS, touchingTiles);
                 // after this point it is offsetting for the view.
                 // logic changes for which square to be on should be done before this point
                 rx = target.x % 1 || 0;
@@ -110,13 +119,13 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         }
 
         function render(targetX, targetY) {
-            self.dispatch('before-render');
+            self.dispatch(events.BEFORE_RENDER);
             var dataOffsetPoint = updateTarget();
             var ox = (viewOffset.x - dataOffsetPoint.vx) * tileSize;
             var oy = (viewOffset.y - dataOffsetPoint.vy) * tileSize;
             viewEl.style.transform = "translate(" + ox + "px, " + oy + "px)";
             eachTile(renderTile, dataOffsetPoint);
-            self.dispatch('after-render');
+            self.dispatch(events.AFTER_RENDER);
         }
 
         function createTiles() {
@@ -145,8 +154,9 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         createTiles();
     }
 
+    exports.events = events;
     exports.create = function (el, viewWidth, viewHeight, boardData, tileTypePath) {
-        return new GameBoard2d(el, viewWidth, viewHeight, boardData, tileTypePath);
+        return new TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath);
     };
     exports.getDistance = getDistance;
     exports.getAngle = getAngle;
