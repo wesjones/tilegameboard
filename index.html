@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tile Game Board</title>
+    <link rel="stylesheet" type="text/css" href="build/tile-game-board.css">
+    <script src="build/tile-game-board.js"></script>
+</head>
+<body>
+<div class="board"></div>
+<script>
+
+    // these can be anything you want. They can be strings, objects, etc.
+    // I have used strings here in this list for simplicity.
+    var boardData = [
+        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"a"}, {type:"b"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}]
+    ];
+    var board = tileBoard.create(document.querySelector('.board'), 7, 7, boardData, 'type');
+
+    var timer, px, py, speed = 0.5;
+    function start() {
+        timer = setInterval(function() {
+            var key;
+            for (var i = 0; i < downKeys.length; i += 1) {
+                key = downKeys[i];
+                if (key === 39) {
+                    player.move(speed, 0);
+                } else if (key === 37) {
+                    player.move(-speed, 0);
+                } else if (key === 38) {
+                    player.move(0, -speed);
+                } else if (key === 40) {
+                    player.move(0, speed);
+                }
+            }
+            if (player.x !== px || player.y !== py) {
+                px = player.x;
+                py = player.y;
+                board.render(player.x, player.y);
+            }
+        }, 100);
+    }
+    function stop() {
+        clearInterval(timer);
+    }
+
+    var downKeys = [];
+    var player = {
+        x: 0,
+        y: 0,
+        el: document.createElement('div'),
+        move: function(deltaX, deltaY) {
+            this.x += deltaX;
+            this.y += deltaY;
+        }
+    };
+    player.el.classList.add("player");
+
+    board.addItem(player);
+    board.setTarget(player);
+    board.on('before-render', function(evt) {
+
+    });
+    board.on('after-keep-in-bounds', function(event, touchingTiles) {
+        for(var i = 0; i < touchingTiles.length; i += 1) {
+            var tile = touchingTiles[i];
+            if (tile.tile.type === "r") {// we have moved into a square that is not permitted. Push away.
+                var pt = tileBoard.getPointOnCircle(tile.x, tile.y, 1, tileBoard.getAngle(tile.x, tile.y, player.x, player.y));
+                player.x = pt.x;
+                player.y = pt.y;
+            }
+        }
+    });
+    board.on('after-render', function(evt) {
+        // do something after the render is done... pick up tools, add classes to player, etc.
+    });
+
+    start();
+
+    window.addEventListener('keydown', function(event) {
+        if (downKeys.indexOf(event.keyCode) === -1) {
+            downKeys.push(event.keyCode);
+        }
+    });
+
+    window.addEventListener('keyup', function(event) {
+        var index = downKeys.indexOf(event.keyCode);
+        if (index !== -1) {
+            downKeys.splice(index, 1);
+        }
+    });
+
+</script>
+</body>
+</html>

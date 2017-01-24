@@ -1,0 +1,87 @@
+.vendor(@property, @value) {
+  -webkit-@{property}: @value;
+  -moz-@{property}: @value;
+  -ms-@{property}: @value;
+  -o-@{property}: @value;
+  @{property}: @value;
+}
+
+.vendor2(@property, @value, @value1) {
+  -webkit-@{property}: @value, @value1;
+  -moz-@{property}: @value, @value1;
+  -ms-@{property}: @value, @value1;
+  -o-@{property}: @value, @value1;
+  @{property}: @value, @value1;
+}
+
+.vendor3(@property, @value, @value1, @value3) {
+  -webkit-@{property}: @value, @value1, @value3;
+  -moz-@{property}: @value, @value1, @value3;
+  -ms-@{property}: @value, @value1, @value3;
+  -o-@{property}: @value, @value1, @value3;
+  @{property}: @value, @value1, @value3;
+}
+
+.vendorValue(@property, @value) {
+  @webkitValue: ~'-webkit-@{value}';
+  @mozValue: ~'-moz-@{value}';
+  @msValue: ~'-ms-@{value}';
+  @oValue: ~'-o-@{value}';
+
+  @{property}: @webkitValue;
+  @{property}: @mozValue;
+  @{property}: @msValue;
+  @{property}: @oValue;
+  @{property}: @value;
+}
+
+.transition-transform(@value) {
+  -webkit-transition: -webkit-transform @value;
+  -moz-transition: -moz-transform @value;
+  -ms-transition: -ms-transform @value;
+  -o-transition: -o-transform @value;
+  transition: transform @value;
+}
+
+.cssTriangle(@triangleColor, @triangleDirection, @triangleSize, @secTriangleSize:0, @smooth:1) {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: @triangleSize + 0px solid transparent;
+  & when (@secTriangleSize = 0) {
+    @secTriangleSize: @triangleSize;
+  }
+
+  & when (@triangleDirection = top) {
+    border-top-width: @secTriangleSize + 0px;
+    border-top-color: @triangleColor;
+  }
+  & when (@triangleDirection = bottom) {
+    border-bottom-width: @secTriangleSize + 0px;
+    border-bottom-color: @triangleColor;
+  }
+  & when (@triangleDirection = left) {
+    border-right-width: @secTriangleSize + 0px;
+    border-left-color: @triangleColor;
+  }
+  & when (@triangleDirection = right) {
+    border-left-width: @secTriangleSize + 0px;
+    border-right-color: @triangleColor;
+  }
+  // smooth edges
+  & when (@smooth) {
+    .vendor(transform, rotate(360deg));
+    -moz-border-style: inset;
+    -moz-transform: scale(1.1);
+  }
+}
+
+.user-select (@val) {
+  -webkit-touch-callout:  @val;
+  -webkit-user-select:    @val;
+  -khtml-user-select:     @val;
+  -moz-user-select:       @val;
+  -ms-user-select:        @val;
+  user-select:            @val;
+}

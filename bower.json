@@ -1,0 +1,24 @@
+{
+  "name": "tilegameboard",
+  "description": "Creates a moving board for games.",
+  "main": "index.html",
+  "authors": [
+    "Wes Jones <cybus10@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "game",
+    "board",
+    "tile",
+    "scrolling"
+  ],
+  "homepage": "https://github.com/wesjones/tilegameboard",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
