@@ -1,8 +1,8 @@
 {
-  "name": "game-board-2d",
+  "name": "tilegameboard",
   "version": "1.0.0",
   "description": "Creates a moving board for games.",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
