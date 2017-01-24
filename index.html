@@ -7,11 +7,18 @@
     <script src="build/tile-game-board.js"></script>
 </head>
 <body>
+<a href="https://github.com/wesjones/tilegameboard">Github</a><br/>
+<b>bower:</b> <span style="border:1px solid #999;padding:2px;background:#EFEFEF;color:#333;">bower install tilegameboard</span>
+
+<ul>
+    <li>Use Arrow Keys to move player (red square)</li>
+    <li>View page source for how to use.</li>
+</ul>
+
 <div class="board"></div>
 <script>
 
     // these can be anything you want. They can be strings, objects, etc.
-    // I have used strings here in this list for simplicity.
     var boardData = [
         [{type:"b"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
         [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
@@ -23,6 +30,9 @@
         [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
         [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}]
     ];
+    // the path to the value that will be added as a class of each tile is passed as the last argument
+    // so in each board item it will look for the property "tile" and use that value to add classes for styling
+    // to the div.
     var board = tileBoard.create(document.querySelector('.board'), 7, 7, boardData, 'type');
 
     var timer, px, py, speed = 0.5;
