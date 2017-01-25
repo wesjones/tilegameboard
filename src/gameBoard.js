@@ -4,7 +4,8 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         TILE_RENDER_CHANGE: 'tile-render-change',
         AFTER_KEEP_IN_BOUNDS: 'after-keep-in-bounds',
         BEFORE_RENDER: 'before-render',
-        AFTER_RENDER: 'after-render'
+        AFTER_RENDER: 'after-render',
+        TOUCHING_ITEMS: 'touching-items'
     };
 
     function TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath) {
@@ -49,6 +50,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             var offPoint = {x:0, y:0}, xdif, ydif, ox = 0, oy = 0, rx, ry, vx, vy, result;
             if (target) {
                 var touchingTiles = keepInBounds(target);
+//TODO: need to send out items that are within half a unit.
                 self.dispatch(events.AFTER_KEEP_IN_BOUNDS, touchingTiles);
                 // after this point it is offsetting for the view.
                 // logic changes for which square to be on should be done before this point
@@ -88,6 +90,30 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             }
         }
 
+        function updateItems(dop) {
+            var mx = Math.floor(target.x) - dop.x;
+            var my = Math.floor(target.y) - dop.y;
+            // console.log(dop.x, dop.y, mx, my);
+            var item, touchingItems = [];
+            for(var i = 0; i < items.length; i += 1) {
+                item = items[i];
+                if (item === target) {
+                    items.splice(i, 1);
+                    i -= 1;
+                } else {
+                    // if not in view. hide it
+                    item.el.style.left = (item.x - mx + padX) * tileSize + "px";
+                    item.el.style.top = (item.y - my + padY) * tileSize + "px";
+                    if (getDistance(item.x, item.y, target.x, target.y) < 1) {
+                        touchingItems.push(item);
+                    }
+                }
+            }
+            if (touchingItems.length) {
+                self.dispatch(events.TOUCHING_ITEMS, touchingItems);
+            }
+        }
+
         function keepInBounds(point) {
             var maxW = boardData[0].length - 1, maxH = boardData.length - 1;
             point.x = point.x > maxW ? maxW : (point.x < 0 ? 0 : point.x);
@@ -107,9 +133,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             for(var i in points) {
                 if (points.hasOwnProperty(i)) {
                     var pt = points[i];
-                    var d = getDistance(point.x, point.y, pt.x, pt.y);
                     if (boardData[pt.y] && boardData[pt.y][pt.x]) {
-                        pt.distance = d;
                         pt.tile = boardData[pt.y][pt.x];
                         result.push(pt);
                     }
@@ -121,9 +145,10 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         function render(targetX, targetY) {
             self.dispatch(events.BEFORE_RENDER);
             var dataOffsetPoint = updateTarget();
-            var ox = (viewOffset.x - dataOffsetPoint.vx) * tileSize;
-            var oy = (viewOffset.y - dataOffsetPoint.vy) * tileSize;
-            viewEl.style.transform = "translate(" + ox + "px, " + oy + "px)";
+            var oxp = (viewOffset.x - dataOffsetPoint.vx);
+            var oyp = (viewOffset.y - dataOffsetPoint.vy);
+            viewEl.style.transform = "translate(" + (oxp * tileSize) + "px, " + (oyp * tileSize) + "px)";
+            updateItems(dataOffsetPoint);
             eachTile(renderTile, dataOffsetPoint);
             self.dispatch(events.AFTER_RENDER);
         }
@@ -138,9 +163,17 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         }
 
         //TODO: add items to a point on the grid.
-        self.addItem = function(item, x, y) {
-            items.push({x:x, y:y, item:item});
+        self.addItem = function(item) {
+            items.push(item);
             viewEl.appendChild(item.el);
+        };
+
+        self.removeItem = function(item) {
+            var index = items.indexOf(item);
+            if (index !== -1) {
+                viewEl.removeChild(items[index].el);
+                items.splice(index, 1);
+            }
         };
 
         self.setTarget = function(point) {

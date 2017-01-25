@@ -20,15 +20,25 @@
 
     // these can be anything you want. They can be strings, objects, etc.
     var boardData = [
-        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"a"}, {type:"b"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}]
+        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"a"}, {type:"b"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}]
     ];
     // the path to the value that will be added as a class of each tile is passed as the last argument
     // so in each board item it will look for the property "tile" and use that value to add classes for styling
@@ -68,13 +78,24 @@
         y: 0,
         el: document.createElement('div'),
         move: function(deltaX, deltaY) {
+            var self = this;
+            var el = this.el;
             this.x += deltaX;
             this.y += deltaY;
         }
     };
     player.el.classList.add("player");
+    player.el.classList.add("archer");
+
+    var tool = {
+        x: 4,
+        y: 4,
+        el: document.createElement('div')
+    };
+    tool.el.classList.add('tool');
 
     board.addItem(player);
+    board.addItem(tool);
     board.setTarget(player);
     board.on(tileBoard.events.BEFORE_RENDER, function(evt) {
 
@@ -94,6 +115,14 @@
     });
     board.on(tileBoard.events.TILE_RENDER_CHANGE, function(evt, tile, row, col) {
         tile.el.innerHTML = 'R:' + row + " C:" + col;
+    });
+    board.on(tileBoard.events.TOUCHING_ITEMS, function(evt, items) {
+        for(var i = 0; i < items.length; i += 1) {
+            if (items[i] === tool) {
+                board.removeItem(items[i]);
+                player.el.classList.add('tool');
+            }
+        }
     });
 
     start();
