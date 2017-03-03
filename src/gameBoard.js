@@ -51,7 +51,12 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             if (target) {
                 var touchingTiles = keepInBounds(target);
 //TODO: need to send out items that are within half a unit.
-                self.dispatch(events.AFTER_KEEP_IN_BOUNDS, touchingTiles);
+                var evt = self.dispatch(events.AFTER_KEEP_IN_BOUNDS, touchingTiles);
+                if (evt.defaultPrevented) {
+                    // put them back to their previous position.
+                    target.x = target.$px;
+                    target.y = target.$py;
+                }
                 // after this point it is offsetting for the view.
                 // logic changes for which square to be on should be done before this point
                 rx = target.x % 1 || 0;
@@ -86,6 +91,8 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
                 };
                 target.el.style.left = (padX + ox + rx) * tileSize + "px";
                 target.el.style.top = (padY + oy + ry) * tileSize + "px";
+                target.$px = target.x;
+                target.$py = target.y;
                 return result;
             }
         }
@@ -142,7 +149,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             return result;
         }
 
-        function render(targetX, targetY) {
+        function render() {
             self.dispatch(events.BEFORE_RENDER);
             var dataOffsetPoint = updateTarget();
             var oxp = (viewOffset.x - dataOffsetPoint.vx);
@@ -163,7 +170,15 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         }
 
         //TODO: add items to a point on the grid.
-        self.addItem = function(item) {
+        self.addItem = function(item, classes) {
+            if (!item.el) {
+                item.el = document.createElement('div');
+            }
+            if (classes) {
+                for(var i = 0; i < classes.length; i += 1) {
+                    item.el.classList.add(classes[i]);
+                }
+            }
             items.push(item);
             viewEl.appendChild(item.el);
         };

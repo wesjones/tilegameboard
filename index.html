@@ -5,6 +5,15 @@
     <title>Tile Game Board</title>
     <link rel="stylesheet" type="text/css" href="build/tile-game-board.css">
     <script src="build/tile-game-board.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/wesjones/tilegameboard-maps/a7403471/magecity/magecity.css">
+    <style>
+        .tree-leaves-big {
+            position: absolute;
+            width: 96px;
+            height: 96px;
+            transform: translate(-64px, -64px);
+        }
+    </style>
 </head>
 <body>
 <a href="https://github.com/wesjones/tilegameboard">Github</a><br/>
@@ -15,16 +24,16 @@
     <li>View page source for how to use.</li>
 </ul>
 
-<div class="board"></div>
+<div class="board x64"></div>
 <script>
 
     // these can be anything you want. They can be strings, objects, etc.
     var boardData = [
-        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"magecity double roof-bamboo-top-right_sand-wall x64"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
         [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
         [{type:"b"}, {type:"a"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"a"}, {type:"b"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
+        [{type:"a"}, {type:"r"}, {type:"r"}, {type:"r"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
+        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
         [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
         [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
         [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
@@ -78,8 +87,6 @@
         y: 0,
         el: document.createElement('div'),
         move: function(deltaX, deltaY) {
-            var self = this;
-            var el = this.el;
             this.x += deltaX;
             this.y += deltaY;
         }
@@ -87,28 +94,30 @@
     player.el.classList.add("player");
     player.el.classList.add("archer");
 
-    var tool = {
-        x: 4,
-        y: 4,
-        el: document.createElement('div')
-    };
-    tool.el.classList.add('tool');
-
     board.addItem(player);
-    board.addItem(tool);
+    board.addItem({name:'tool', x:4, y:4}, ['tool']);
+    board.addItem({name:'leaves', x:4, y:4}, ['magecity', 'tree-leaves-big', 'x64']);
     board.setTarget(player);
     board.on(tileBoard.events.BEFORE_RENDER, function(evt) {
 
     });
     board.on(tileBoard.events.AFTER_KEEP_IN_BOUNDS, function(event, touchingTiles) {
+        var p, pt = {x:0, y:0, c:0};
         for(var i = 0; i < touchingTiles.length; i += 1) {
             var tile = touchingTiles[i];
             if (tile.tile.type === "r") {// we have moved into a square that is not permitted. Push away.
-                var pt = tileBoard.getPointOnCircle(tile.x, tile.y, 1, tileBoard.getAngle(tile.x, tile.y, player.x, player.y));
-                player.x = pt.x;
-                player.y = pt.y;
+                event.preventDefault();
+                return;
+//                p = tileBoard.getPointOnCircle(tile.x, tile.y, 1.01, tileBoard.getAngle(tile.x, tile.y, player.x, player.y));
+//                pt.x += p.x;
+//                pt.y += p.y;
+//                pt.c += 1;
             }
         }
+//        if (pt.c) {
+//            player.x = pt.x / pt.c;
+//            player.y = pt.y / pt.c;
+//        }
     });
     board.on(tileBoard.events.AFTER_RENDER, function(evt) {
         // do something after the render is done... pick up tools, add classes to player, etc.
@@ -118,7 +127,7 @@
     });
     board.on(tileBoard.events.TOUCHING_ITEMS, function(evt, items) {
         for(var i = 0; i < items.length; i += 1) {
-            if (items[i] === tool) {
+            if (items[i].name === 'tool') {
                 board.removeItem(items[i]);
                 player.el.classList.add('tool');
             }

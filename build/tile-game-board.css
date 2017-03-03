@@ -23,6 +23,11 @@ body {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.board.x64 .tile,
+.board.x64 .player {
+  width: 64px;
+  height: 64px;
+}
 .view {
   position: absolute;
   top: 0;
@@ -39,8 +44,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid #333;
   -webkit-box-sizing: border-box;
@@ -50,7 +55,7 @@ body {
   box-sizing: border-box;
   font-size: 8px;
 }
-.empty {
+.tile.empty {
   background: rgba(0, 0, 255, 0.25);
 }
 .tile.a {
@@ -63,16 +68,16 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   background-color: rgba(255, 0, 0, 0.5);
 }
 .tool {
   position: absolute;
   top: 0;
   left: 0;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
 }
 .tool:after {
   content: "";
