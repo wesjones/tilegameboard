@@ -179,6 +179,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
                     item.el.classList.add(classes[i]);
                 }
             }
+            item.el.style.position = 'absolute';
             items.push(item);
             viewEl.appendChild(item.el);
         };
