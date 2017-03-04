@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mage City</title>
+    <link rel="stylesheet" type="text/css" href="magecity.css">
+    <style type="text/css">
+        html, body {
+            font-family: Arial Narrow, Arial;
+            color: #333;
+            font-size: 13px;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+        }
+        .blocks {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: calc(50*32px);
+        }
+        .row {
+            margin-right:5px;
+        }
+        .row:nth-child(odd) {
+            background: #ddd;
+        }
+        .blocks .row div.label {
+            height: 32px;
+            display: inline-block;
+            vertical-align: top;
+            flex-grow: 1;
+        }
+        .blocks .row div.label.double {
+            color: #336699;
+        }
+        .blocks .row .label.tripple {
+            color: #ff00ff;
+        }
+        .blocks .row {
+            width: 250px;
+            flex-grow: 1;
+            display: flex;
+        }
+        .blocks .row div {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="blocks"></div>
+
+<script>
+    var classes = [
+        'blank',
+        'grass',
+        'grass-smash-1',
+        'grass-smash-2',
+        'grass-cherries-1',
+        'grass-cherries-2',
+        'grass-shadow-top-left',
+        'grass-shadow-top-left-short',
+        'grass-shadow-left',
+        'grass-shadow-bottom-left',
+        'grass-shadow-overlay-top-left',
+        'grass-shadow-overlay-top-left-short',
+        'grass-shadow-overlay-left',
+        'grass-shadow-overlay-bottom-left',
+        'double pumpkin_grass',
+        'double pumpkins_grass',
+        'double leaves-2_grass',
+        'double leaves-3_grass',
+        'double leaves-4_grass',
+        'double leaves-5_grass',
+        'double leaves-5-1_grass',
+        'stone',
+        'stone-weed',
+        'grass-to-stone-left',
+        'grass-to-stone-right',
+        'grass-to-stone-bottom',
+        'grass-to-stone-top',
+        'grass-with-stone-bottom-left',
+        'grass-with-stone-bottom-right',
+        'grass-with-stone-top-left',
+        'grass-with-stone-top-right',
+
+        'brick-left',
+        'brick-center',
+        'brick-right',
+        'brick-shadow-top-left',
+        'brick-shadow-top-center',
+        'brick-shadow-top-right',
+        'brick-shadow-top-left-corner',
+        'brick-shadow-top-left-corner-dark',
+        'brick-shadow-left-edge',
+        'brick-shadow-left-edge-dark',
+        'brick-shadow-left-edge-grass',
+        'brick-shadow-left-edge-grass-dark',
+        'brick-grass-bottom-left',
+        'brick-grass-bottom-center',
+        'brick-grass-bottom-right',
+
+        'sand-wall-edge-left',
+        'sand-wall',
+        'sand-wall-edge-right',
+        'sand-wall-edge-left-dark',
+        'sand-wall-dark',
+        'sand-wall-edge-right-dark',
+        'sand-wall-top-edge-left',
+        'sand-wall-top',
+        'sand-wall-top-edge-right',
+        'sand-wall-top-vine',
+        'sand-wall-top-vine-start',
+        'sand-wall-top-vine-end',
+        'sand-wall-edge-right-vine',
+        'sand-wall-edge-right-vine-end',
+        'sand-wall-missing-block-left',
+        'sand-wall-missing-block-right',
+        'sand-wall-edge-top-left-water',
+        'sand-wall-edge-top-center-water',
+        'sand-wall-edge-top-right-water',
+        'sand-wall-edge-middle-left-water',
+        'sand-wall-edge-middle-center-water',
+        'sand-wall-edge-middle-right-water',
+        'sand-wall-narrow-top-water',
+        'sand-wall-narrow-center-water',
+        'sand-wall-ground',
+        'wall-grass',
+        'stairs-left',
+        'stairs-center',
+        'stairs-right',
+        'stairs-bottom-left',
+        'stairs-bottom-center',
+        'stairs-bottom-right',
+        'stairs-narrow',
+        'stairs-narrow-bottom',
+        'cobble-stone-top-left',
+        'cobble-stone-top-center',
+        'cobble-stone-top-right',
+        'cobble-stone-middle-left',
+        'cobble-stone-middle-center',
+        'cobble-stone-middle-right',
+        'cobble-stone-bottom-left',
+        'cobble-stone-bottom-center',
+        'cobble-stone-bottom-right',
+        'cobble-stone-2-top-left',
+        'cobble-stone-2-top-right',
+        'cobble-stone-2-bottom-left',
+        'cobble-stone-2-bottom-right',
+        'roof-fill',
+        'roof-fill-broken',
+        'roof-wood-top-left',
+        'roof-wood-top-center',
+        'roof-wood-top-right',
+        'roof-wood-middle-left',
+        'roof-wood-middle-center',
+        'roof-wood-middle-right',
+        'roof-wood-bottom-left',
+        'roof-wood-bottom-center',
+        'roof-wood-bottom-right',
+        'roof-wood-front-arch-left',
+        'roof-wood-front-arch-right',
+        'double roof-wood-top-left_grass',
+        'double roof-wood-top-right_grass',
+        'double roof-wood-top-left_sand-wall',
+        'double roof-wood-top-right_sand-wall',
+
+        'doorway',
+        'doorway-down-stone',
+        'doorway-down-cobble-stone',
+
+        'roof-bamboo-top-left',
+        'roof-bamboo-top-center',
+        'roof-bamboo-top-right',
+        'roof-bamboo-middle-left',
+        'roof-bamboo-middle-center',
+        'roof-bamboo-middle-right',
+        'roof-bamboo-bottom-left',
+        'roof-bamboo-bottom-center',
+        'roof-bamboo-bottom-right',
+        'roof-bamboo-front-arch-left',
+        'roof-bamboo-front-arch-right',
+        'double roof-bamboo-top-left_grass',
+        'double roof-bamboo-top-right_grass',
+        'double roof-bamboo-top-left_sand-wall',
+        'double roof-bamboo-top-right_sand-wall',
+
+        // items
+        'herb-full',
+        'herb-half',
+        'plant-pot',
+        'fern',
+        'herb-pot',
+        'barrel-sml',
+        'table',
+        'stool-right',
+        'stool-left',
+        'fern-pillar',
+        'tree-pot-dead',
+        'tree-pot',
+        'barrel-lg',
+        'sand-column',
+        'sand-fountain',
+        'oil-lamp',
+        'spice',
+        'meal',
+        'meal-empty',
+        'flour',
+        'potions',
+        'tree-candles',
+        'mushrooms',
+        'bird-bath',
+        'woman-statue',
+        'bench',
+        'tree-cursed',
+        'tree-large',
+        'tree-leaves-sml',
+        'tree-leaves-big',
+        'pumpkin',
+        'pumpkins',
+        'leaves-2',
+        'leaves-3',
+        'leaves-4',
+        'leaves-5',
+        'leaves-5-1',
+        'sand-wall-hole',
+        'glass-window-sign',
+        'glass-window',
+        'glass-window-narrow',
+        'glass-window-narrow-short',
+        'cupid',
+        'lantern-left',
+        'lantern-right',
+        'chimney',
+        'glass-window-left',
+        'glass-window-right',
+        'glass-window-center',
+        'glass-window-center-shutters',
+        'glass-window-center-with-trim-right',
+        'glass-window-center-with-trim-left',
+        'glass-window-narrow-double',
+        'glass-window-with-plants',
+
+        'desk-right',
+        'desk-left',
+        'grass-dirt-patch-1-0x0',
+        'grass-dirt-patch-1-1x0',
+        'grass-dirt-patch-1-0x1',
+        'grass-dirt-patch-1-1x1',
+
+        'grass-dirt-patch-2-0x0',
+        'grass-dirt-patch-2-1x0',
+        'grass-dirt-patch-2-2x0',
+        'grass-dirt-patch-2-0x1',
+        'grass-dirt-patch-2-1x1',
+        'grass-dirt-patch-2-2x1',
+        'grass-dirt-patch-2-3x1',
+        'grass-dirt-patch-2-0x2',
+        'grass-dirt-patch-2-1x2',
+        'grass-dirt-patch-2-2x2',
+        'grass-dirt-patch-2-3x2',
+    ];
+    var blocks = document.querySelector(".blocks");
+    for(var i = 0; i < classes.length; i += 1) {
+        var cls = 'magecity ' + classes[i];
+        var d = document.createElement('div');
+        d.className = "row";
+        d.innerHTML = '<div class="label ' + (cls.indexOf(' double ') !== -1 ? 'double' : (cls.indexOf(' tripple ') !== -1 ? 'tripple' : '')) + '">' + cls.replace(/\-/g, '&#8209;') + '</div><div class="' + cls + ' trans"><div class="' + cls + '"></div></div>';
+        blocks.appendChild(d);
+    }
+</script>
+</body>
+</html>

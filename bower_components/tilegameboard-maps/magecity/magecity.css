@@ -1,0 +1,4923 @@
+.trans {
+  position: relative;
+  background: url(../checkersbg.png) !important;
+  background-size: 32px 32px !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  transform: none !important;
+}
+.trans:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.magecity {
+  background-image: url(magecity_0.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 256px 1452px;
+  -moz-background-size: 256px 1452px;
+  -ms-background-size: 256px 1452px;
+  -o-background-size: 256px 1452px;
+  background-size: 256px 1452px;
+}
+.magecity.double {
+  background: url(magecity_0.png) no-repeat, url(magecity_0.png) no-repeat;
+}
+.magecity.tripple {
+  background: url(magecity_0.png) no-repeat, url(magecity_0.png) no-repeat, url(magecity_0.png) no-repeat;
+}
+.magecity.grass {
+  width: 32px;
+  height: 32px;
+  background-position: 0px 0px;
+}
+.magecity.grass.trans:after {
+  content: '1x1';
+}
+.magecity.blank {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -32px;
+}
+.magecity.blank.trans:after {
+  content: '1x1';
+}
+.magecity.stone {
+  width: 32px;
+  height: 32px;
+  background-position: -32px 0px;
+}
+.magecity.stone.trans:after {
+  content: '1x1';
+}
+.magecity.stone-weed {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -32px;
+}
+.magecity.stone-weed.trans:after {
+  content: '1x1';
+}
+.magecity.herb-full {
+  width: 32px;
+  height: 32px;
+  background-position: -64px 0px;
+}
+.magecity.herb-full.trans:after {
+  content: '1x1';
+}
+.magecity.herb-half {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0px;
+}
+.magecity.herb-half.trans:after {
+  content: '1x1';
+}
+.magecity.plant-pot {
+  width: 32px;
+  height: 32px;
+  background-position: -128px 0px;
+}
+.magecity.plant-pot.trans:after {
+  content: '1x1';
+}
+.magecity.fern {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -32px;
+}
+.magecity.fern.trans:after {
+  content: '1x1';
+}
+.magecity.herb-pot {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -32px;
+}
+.magecity.herb-pot.trans:after {
+  content: '1x1';
+}
+.magecity.barrel-sml {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -32px;
+}
+.magecity.barrel-sml.trans:after {
+  content: '1x1';
+}
+.magecity.table {
+  width: 64px;
+  height: 64px;
+  background-position: -160px 0px;
+}
+.magecity.table.trans:after {
+  content: '2x2';
+}
+.magecity.stool-right {
+  width: 32px;
+  height: 32px;
+  background-position: -224px 0px;
+}
+.magecity.stool-right.trans:after {
+  content: '1x1';
+}
+.magecity.stool-left {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -32px;
+}
+.magecity.stool-left.trans:after {
+  content: '1x1';
+}
+.magecity.fern-pillar {
+  width: 32px;
+  height: 64px;
+  background-position: 0px -64px;
+}
+.magecity.fern-pillar.trans:after {
+  content: '1x2';
+}
+.magecity.tree-pot-dead {
+  width: 64px;
+  height: 64px;
+  background-position: -32px -64px;
+}
+.magecity.tree-pot-dead.trans:after {
+  content: '2x2';
+}
+.magecity.tree-pot {
+  width: 32px;
+  height: 64px;
+  background-position: -96px -64px;
+}
+.magecity.tree-pot.trans:after {
+  content: '1x2';
+}
+.magecity.barrel-lg {
+  width: 32px;
+  height: 64px;
+  background-position: -128px -64px;
+}
+.magecity.barrel-lg.trans:after {
+  content: '1x2';
+}
+.magecity.sand-column {
+  width: 32px;
+  height: 64px;
+  background-position: -160px -64px;
+}
+.magecity.sand-column.trans:after {
+  content: '1x2';
+}
+.magecity.sand-fountain {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -64px;
+}
+.magecity.sand-fountain.trans:after {
+  content: '2x2';
+}
+.magecity.sand-wall-edge-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -128px;
+}
+.magecity.sand-wall-edge-left.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -128px;
+}
+.magecity.sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -128px;
+}
+.magecity.sand-wall-edge-right.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-left-dark {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -160px;
+}
+.magecity.sand-wall-edge-left-dark.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-dark {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -160px;
+}
+.magecity.sand-wall-dark.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-right-dark {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -160px;
+}
+.magecity.sand-wall-edge-right-dark.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-top-edge-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -128px;
+}
+.magecity.sand-wall-top-edge-left.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-top {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -128px;
+}
+.magecity.sand-wall-top.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-top-edge-right {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -128px;
+}
+.magecity.sand-wall-top-edge-right.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-top-vine {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -160px;
+}
+.magecity.sand-wall-top-vine.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-top-vine-start {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -128px;
+}
+.magecity.sand-wall-top-vine-start.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-top-vine-end {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -160px;
+}
+.magecity.sand-wall-top-vine-end.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-right-vine {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -128px;
+}
+.magecity.sand-wall-edge-right-vine.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-right-vine-end {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -160px;
+}
+.magecity.sand-wall-edge-right-vine-end.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-missing-block-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -160px;
+}
+.magecity.sand-wall-missing-block-left.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-missing-block-right {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -160px;
+}
+.magecity.sand-wall-missing-block-right.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-top-left-water {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -192px;
+}
+.magecity.sand-wall-edge-top-left-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-top-center-water {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -192px;
+}
+.magecity.sand-wall-edge-top-center-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-top-right-water {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -192px;
+}
+.magecity.sand-wall-edge-top-right-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-middle-left-water {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -224px;
+}
+.magecity.sand-wall-edge-middle-left-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-middle-center-water {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -224px;
+}
+.magecity.sand-wall-edge-middle-center-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-edge-middle-right-water {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -224px;
+}
+.magecity.sand-wall-edge-middle-right-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-narrow-top-water {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -192px;
+}
+.magecity.sand-wall-narrow-top-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-narrow-center-water {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -224px;
+}
+.magecity.sand-wall-narrow-center-water.trans:after {
+  content: '1x1';
+}
+.magecity.sand-wall-ground {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -192px;
+}
+.magecity.sand-wall-ground.trans:after {
+  content: '1x1';
+}
+.magecity.wall-grass {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -192px;
+}
+.magecity.wall-grass.trans:after {
+  content: '1x1';
+}
+.magecity.oil-lamp {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -192px;
+}
+.magecity.oil-lamp.trans:after {
+  content: '1x1';
+}
+.magecity.spice {
+  width: 16px;
+  height: 32px;
+  background-position: -224px -192px;
+}
+.magecity.spice.trans:after {
+  content: '0.5x1';
+}
+.magecity.stairs-left {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -224px;
+}
+.magecity.stairs-left.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-center {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -224px;
+}
+.magecity.stairs-center.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-right {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -224px;
+}
+.magecity.stairs-right.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -256px;
+}
+.magecity.stairs-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-bottom-center {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -256px;
+}
+.magecity.stairs-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -256px;
+}
+.magecity.stairs-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-narrow {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -224px;
+}
+.magecity.stairs-narrow.trans:after {
+  content: '1x1';
+}
+.magecity.stairs-narrow-bottom {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -256px;
+}
+.magecity.stairs-narrow-bottom.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -288px;
+}
+.magecity.cobble-stone-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-top-center {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -288px;
+}
+.magecity.cobble-stone-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-top-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -288px;
+}
+.magecity.cobble-stone-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-middle-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -320px;
+}
+.magecity.cobble-stone-middle-left.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-middle-center {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -320px;
+}
+.magecity.cobble-stone-middle-center.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-middle-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -320px;
+}
+.magecity.cobble-stone-middle-right.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -352px;
+}
+.magecity.cobble-stone-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-bottom-center {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -352px;
+}
+.magecity.cobble-stone-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -352px;
+}
+.magecity.cobble-stone-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-2-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -288px;
+}
+.magecity.cobble-stone-2-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-2-top-right {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -288px;
+}
+.magecity.cobble-stone-2-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-2-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -320px;
+}
+.magecity.cobble-stone-2-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.cobble-stone-2-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -320px;
+}
+.magecity.cobble-stone-2-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.meal {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -288px;
+}
+.magecity.meal.trans:after {
+  content: '1x1';
+}
+.magecity.meal-empty {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -288px;
+}
+.magecity.meal-empty.trans:after {
+  content: '1x1';
+}
+.magecity.flour {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -288px;
+}
+.magecity.flour.trans:after {
+  content: '1x1';
+}
+.magecity.potions {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -320px;
+}
+.magecity.potions.trans:after {
+  content: '1x1';
+}
+.magecity.tree-candles {
+  width: 32px;
+  height: 96px;
+  background-position: 0px -384px;
+}
+.magecity.tree-candles.trans:after {
+  content: '1x3';
+}
+.magecity.mushrooms {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -384px;
+}
+.magecity.mushrooms.trans:after {
+  content: '1x1';
+}
+.magecity.bird-bath {
+  width: 32px;
+  height: 64px;
+  background-position: -32px -416px;
+}
+.magecity.bird-bath.trans:after {
+  content: '1x2';
+}
+.magecity.woman-statue {
+  width: 32px;
+  height: 96px;
+  background-position: -64px -384px;
+}
+.magecity.woman-statue.trans:after {
+  content: '1x3';
+}
+.magecity.bench {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -480px;
+}
+.magecity.bench.trans:after {
+  content: '2x2';
+}
+.magecity.tree-cursed {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -480px;
+}
+.magecity.tree-cursed.trans:after {
+  content: '2x4';
+}
+.magecity.tree-large {
+  width: 128px;
+  height: 160px;
+  background-position: -128px -448px;
+}
+.magecity.tree-large.trans:after {
+  content: '4x5';
+}
+.magecity.sand-wall-hole {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -608px;
+}
+.magecity.sand-wall-hole.trans:after {
+  content: '1x1';
+}
+.magecity.glass-window-sign {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -640px;
+}
+.magecity.glass-window-sign.trans:after {
+  content: '1x1';
+}
+.magecity.glass-window {
+  width: 32px;
+  height: 64px;
+  background-position: -32px -608px;
+}
+.magecity.glass-window.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-narrow {
+  width: 32px;
+  height: 64px;
+  background-position: -64px -608px;
+}
+.magecity.glass-window-narrow.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-narrow-short {
+  width: 32px;
+  height: 64px;
+  background-position: -96px -608px;
+}
+.magecity.glass-window-narrow-short.trans:after {
+  content: '1x2';
+}
+.magecity.cupid {
+  width: 32px;
+  height: 64px;
+  background-position: -128px -608px;
+}
+.magecity.cupid.trans:after {
+  content: '1x2';
+}
+.magecity.lantern-left {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -640px;
+}
+.magecity.lantern-left.trans:after {
+  content: '1x1';
+}
+.magecity.lantern-right {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -640px;
+}
+.magecity.lantern-right.trans:after {
+  content: '1x1';
+}
+.magecity.chimney {
+  width: 32px;
+  height: 64px;
+  background-position: -224px -608px;
+}
+.magecity.chimney.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-right {
+  width: 32px;
+  height: 64px;
+  background-position: 0px -672px;
+}
+.magecity.glass-window-right.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-left {
+  width: 32px;
+  height: 64px;
+  background-position: -32px -672px;
+}
+.magecity.glass-window-left.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-center {
+  width: 32px;
+  height: 64px;
+  background-position: -64px -672px;
+}
+.magecity.glass-window-center.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-center-shutters {
+  width: 32px;
+  height: 64px;
+  background-position: -96px -672px;
+}
+.magecity.glass-window-center-shutters.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-center-with-trim-right {
+  width: 32px;
+  height: 64px;
+  background-position: -128px -672px;
+}
+.magecity.glass-window-center-with-trim-right.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-center-with-trim-left {
+  width: 32px;
+  height: 64px;
+  background-position: -160px -672px;
+}
+.magecity.glass-window-center-with-trim-left.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-narrow-double {
+  width: 32px;
+  height: 64px;
+  background-position: -192px -672px;
+}
+.magecity.glass-window-narrow-double.trans:after {
+  content: '1x2';
+}
+.magecity.glass-window-with-plants {
+  width: 32px;
+  height: 64px;
+  background-position: -224px -672px;
+}
+.magecity.glass-window-with-plants.trans:after {
+  content: '1x2';
+}
+.magecity.roof-fill {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -736px;
+}
+.magecity.roof-fill.trans:after {
+  content: '1x1';
+}
+.magecity.roof-fill-broken {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -736px;
+}
+.magecity.roof-fill-broken.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -736px;
+}
+.magecity.roof-wood-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-top-center {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -736px;
+}
+.magecity.roof-wood-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-top-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -736px;
+}
+.magecity.roof-wood-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-middle-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -768px;
+}
+.magecity.roof-wood-middle-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-middle-center {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -768px;
+}
+.magecity.roof-wood-middle-center.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-middle-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -768px;
+}
+.magecity.roof-wood-middle-right.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -800px;
+}
+.magecity.roof-wood-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-bottom-center {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -800px;
+}
+.magecity.roof-wood-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -800px;
+}
+.magecity.roof-wood-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-front-arch-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -768px;
+}
+.magecity.roof-wood-front-arch-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-wood-front-arch-right {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -768px;
+}
+.magecity.roof-wood-front-arch-right.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-wood-top-left_grass {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -736px, 0px 0px;
+}
+.magecity.double.roof-wood-top-left_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-wood-top-right_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -736px, 0px 0px;
+}
+.magecity.double.roof-wood-top-right_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-wood-top-left_sand-wall {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -736px, -32px -128px;
+}
+.magecity.double.roof-wood-top-left_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-wood-top-right_sand-wall {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -736px, -32px -128px;
+}
+.magecity.double.roof-wood-top-right_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -736px;
+}
+.magecity.roof-bamboo-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-top-center {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -736px;
+}
+.magecity.roof-bamboo-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-top-right {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -736px;
+}
+.magecity.roof-bamboo-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-middle-left {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -768px;
+}
+.magecity.roof-bamboo-middle-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-middle-center {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -768px;
+}
+.magecity.roof-bamboo-middle-center.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-middle-right {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -768px;
+}
+.magecity.roof-bamboo-middle-right.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -800px;
+}
+.magecity.roof-bamboo-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-bottom-center {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -800px;
+}
+.magecity.roof-bamboo-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -800px;
+}
+.magecity.roof-bamboo-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-front-arch-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -800px;
+}
+.magecity.roof-bamboo-front-arch-left.trans:after {
+  content: '1x1';
+}
+.magecity.roof-bamboo-front-arch-right {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -800px;
+}
+.magecity.roof-bamboo-front-arch-right.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-bamboo-top-left_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -736px, 0px 0px;
+}
+.magecity.double.roof-bamboo-top-left_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-bamboo-top-right_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -736px, 0px 0px;
+}
+.magecity.double.roof-bamboo-top-right_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-bamboo-top-left_sand-wall {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -736px, -32px -128px;
+}
+.magecity.double.roof-bamboo-top-left_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.double.roof-bamboo-top-right_sand-wall {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -736px, -32px -128px;
+}
+.magecity.double.roof-bamboo-top-right_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.grass-to-stone-left {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -832px;
+}
+.magecity.grass-to-stone-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-to-stone-right {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -864px;
+}
+.magecity.grass-to-stone-right.trans:after {
+  content: '1x1';
+}
+.magecity.grass-to-stone-bottom {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -896px;
+}
+.magecity.grass-to-stone-bottom.trans:after {
+  content: '1x1';
+}
+.magecity.grass-to-stone-top {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -928px;
+}
+.magecity.grass-to-stone-top.trans:after {
+  content: '1x1';
+}
+.magecity.grass-with-stone-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -928px;
+}
+.magecity.grass-with-stone-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-with-stone-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -928px;
+}
+.magecity.grass-with-stone-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.grass-with-stone-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -928px;
+}
+.magecity.grass-with-stone-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-with-stone-top-right {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -928px;
+}
+.magecity.grass-with-stone-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -832px;
+}
+.magecity.grass-shadow-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-top-left-short {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -864px;
+}
+.magecity.grass-shadow-top-left-short.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-left {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -896px;
+}
+.magecity.grass-shadow-left.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -832px;
+}
+.magecity.brick-shadow-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-top-center {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -832px;
+}
+.magecity.brick-shadow-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-top-right {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -832px;
+}
+.magecity.brick-shadow-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.brick-left {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -864px;
+}
+.magecity.brick-left.trans:after {
+  content: '1x1';
+}
+.magecity.brick-center {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -864px;
+}
+.magecity.brick-center.trans:after {
+  content: '1x1';
+}
+.magecity.brick-right {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -864px;
+}
+.magecity.brick-right.trans:after {
+  content: '1x1';
+}
+.magecity.brick-grass-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -896px;
+}
+.magecity.brick-grass-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.brick-grass-bottom-center {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -896px;
+}
+.magecity.brick-grass-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.brick-grass-bottom-right {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -896px;
+}
+.magecity.brick-grass-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.tree-leaves-sml {
+  z-index: 2;
+  width: 96px;
+  height: 96px;
+  background-position: 0px -960px;
+  -webkit-transform: translate(-32px, -32px);
+  -moz-transform: translate(-32px, -32px);
+  -ms-transform: translate(-32px, -32px);
+  -o-transform: translate(-32px, -32px);
+  transform: translate(-32px, -32px);
+}
+.magecity.tree-leaves-sml.trans:after {
+  content: '3x3';
+}
+.magecity.tree-leaves-big {
+  z-index: 2;
+  width: 96px;
+  height: 96px;
+  background-position: -96px -960px;
+  -webkit-transform: translate(-32px, -32px);
+  -moz-transform: translate(-32px, -32px);
+  -ms-transform: translate(-32px, -32px);
+  -o-transform: translate(-32px, -32px);
+  transform: translate(-32px, -32px);
+}
+.magecity.tree-leaves-big.trans:after {
+  content: '3x3';
+}
+.magecity.desk-right {
+  width: 64px;
+  height: 32px;
+  background-position: -192px -960px;
+}
+.magecity.desk-right.trans:after {
+  content: '2x1';
+}
+.magecity.desk-left {
+  width: 64px;
+  height: 32px;
+  background-position: -192px -992px;
+}
+.magecity.desk-left.trans:after {
+  content: '2x1';
+}
+.magecity.pumpkin {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1024px;
+}
+.magecity.pumpkin.trans:after {
+  content: '1x1';
+}
+.magecity.pumpkins {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1056px;
+}
+.magecity.pumpkins.trans:after {
+  content: '1x1';
+}
+.magecity.leaves-2 {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -1056px;
+}
+.magecity.leaves-2.trans:after {
+  content: '1x1';
+}
+.magecity.leaves-3 {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1056px;
+}
+.magecity.leaves-3.trans:after {
+  content: '1x1';
+}
+.magecity.leaves-4 {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1088px;
+}
+.magecity.leaves-4.trans:after {
+  content: '1x1';
+}
+.magecity.leaves-5 {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1024px;
+}
+.magecity.leaves-5.trans:after {
+  content: '1x1';
+}
+.magecity.leaves-5-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1088px;
+}
+.magecity.leaves-5-1.trans:after {
+  content: '1x1';
+}
+.magecity.double.pumpkin_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1024px, 0px 0px;
+}
+.magecity.double.pumpkin_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.pumpkins_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1056px, 0px 0px;
+}
+.magecity.double.pumpkins_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.leaves-2_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -1056px, 0px 0px;
+}
+.magecity.double.leaves-2_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.leaves-3_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1056px, 0px 0px;
+}
+.magecity.double.leaves-3_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.leaves-4_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1088px, 0px 0px;
+}
+.magecity.double.leaves-4_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.leaves-5_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1024px, 0px 0px;
+}
+.magecity.double.leaves-5_grass.trans:after {
+  content: '1x1';
+}
+.magecity.double.leaves-5-1_grass {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1088px, 0px 0px;
+}
+.magecity.double.leaves-5-1_grass.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-1-0x0 {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -1056px;
+}
+.magecity.grass-dirt-patch-1-0x0.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-1-1x0 {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -1056px;
+}
+.magecity.grass-dirt-patch-1-1x0.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-1-0x1 {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -1088px;
+}
+.magecity.grass-dirt-patch-1-0x1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-1-1x1 {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -1088px;
+}
+.magecity.grass-dirt-patch-1-1x1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-0x0 {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -1056px;
+}
+.magecity.grass-dirt-patch-2-0x0.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-1x0 {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -1056px;
+}
+.magecity.grass-dirt-patch-2-1x0.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-2x0 {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -1056px;
+}
+.magecity.grass-dirt-patch-2-2x0.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-0x1 {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -1088px;
+}
+.magecity.grass-dirt-patch-2-0x1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-1x1 {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -1088px;
+}
+.magecity.grass-dirt-patch-2-1x1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-2x1 {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -1088px;
+}
+.magecity.grass-dirt-patch-2-2x1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-3x1 {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -1088px;
+}
+.magecity.grass-dirt-patch-2-3x1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-0x2 {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -1120px;
+}
+.magecity.grass-dirt-patch-2-0x2.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-1x2 {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -1120px;
+}
+.magecity.grass-dirt-patch-2-1x2.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-2x2 {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -1120px;
+}
+.magecity.grass-dirt-patch-2-2x2.trans:after {
+  content: '1x1';
+}
+.magecity.grass-dirt-patch-2-3x2 {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -1120px;
+}
+.magecity.grass-dirt-patch-2-3x2.trans:after {
+  content: '1x1';
+}
+.magecity.grass-smash-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -1152px;
+}
+.magecity.grass-smash-1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-smash-2 {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -1152px;
+}
+.magecity.grass-smash-2.trans:after {
+  content: '1x1';
+}
+.magecity.grass-cherries-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -1152px;
+}
+.magecity.grass-cherries-1.trans:after {
+  content: '1x1';
+}
+.magecity.grass-cherries-2 {
+  width: 32px;
+  height: 32px;
+  background-position: -160px -1152px;
+}
+.magecity.grass-cherries-2.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1120px;
+}
+.magecity.grass-shadow-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-overlay-bottom-left {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -1152px;
+}
+.magecity.grass-shadow-overlay-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-overlay-top-left {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1120px;
+}
+.magecity.grass-shadow-overlay-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-overlay-top-left-short {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1152px;
+}
+.magecity.grass-shadow-overlay-top-left-short.trans:after {
+  content: '1x1';
+}
+.magecity.grass-shadow-overlay-left {
+  width: 32px;
+  height: 32px;
+  background-position: -224px -1184px;
+}
+.magecity.grass-shadow-overlay-left.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-top-left-corner {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -1120px;
+}
+.magecity.brick-shadow-top-left-corner.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-top-left-corner-dark {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -1120px;
+}
+.magecity.brick-shadow-top-left-corner-dark.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-left-edge {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -1152px;
+}
+.magecity.brick-shadow-left-edge.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-left-edge-dark {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -1152px;
+}
+.magecity.brick-shadow-left-edge-dark.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-left-edge-grass {
+  width: 32px;
+  height: 32px;
+  background-position: 0px -1184px;
+}
+.magecity.brick-shadow-left-edge-grass.trans:after {
+  content: '1x1';
+}
+.magecity.brick-shadow-left-edge-grass-dark {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -1184px;
+}
+.magecity.brick-shadow-left-edge-grass-dark.trans:after {
+  content: '1x1';
+}
+.magecity.doorway {
+  z-index: 0;
+  width: 32px;
+  height: 64px;
+  background-position: -192px -1280px;
+  -webkit-transform: translate(0px, -32px);
+  -moz-transform: translate(0px, -32px);
+  -ms-transform: translate(0px, -32px);
+  -o-transform: translate(0px, -32px);
+  transform: translate(0px, -32px);
+}
+.magecity.doorway.trans:after {
+  content: '1x2';
+}
+.magecity.doorway-down-stone {
+  z-index: 0;
+  width: 32px;
+  height: 32px;
+  background-position: -128px -1376px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.magecity.doorway-down-stone.trans:after {
+  content: '1x1';
+}
+.magecity.doorway-down-cobble-stone {
+  z-index: 0;
+  width: 32px;
+  height: 32px;
+  background-position: -160px -1376px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.magecity.doorway-down-cobble-stone.trans:after {
+  content: '1x1';
+}
+.magecity.x64 {
+  -webkit-background-size: 512px 2904px;
+  -moz-background-size: 512px 2904px;
+  -ms-background-size: 512px 2904px;
+  -o-background-size: 512px 2904px;
+  background-size: 512px 2904px;
+}
+.magecity.x64.grass {
+  width: 64px;
+  height: 64px;
+  background-position: 0px 0px;
+}
+.magecity.x64.grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.blank {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -64px;
+}
+.magecity.x64.blank.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stone {
+  width: 64px;
+  height: 64px;
+  background-position: -64px 0px;
+}
+.magecity.x64.stone.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stone-weed {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -64px;
+}
+.magecity.x64.stone-weed.trans:after {
+  content: '1x1';
+}
+.magecity.x64.herb-full {
+  width: 64px;
+  height: 64px;
+  background-position: -128px 0px;
+}
+.magecity.x64.herb-full.trans:after {
+  content: '1x1';
+}
+.magecity.x64.herb-half {
+  width: 64px;
+  height: 64px;
+  background-position: -192px 0px;
+}
+.magecity.x64.herb-half.trans:after {
+  content: '1x1';
+}
+.magecity.x64.plant-pot {
+  width: 64px;
+  height: 64px;
+  background-position: -256px 0px;
+}
+.magecity.x64.plant-pot.trans:after {
+  content: '1x1';
+}
+.magecity.x64.fern {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -64px;
+}
+.magecity.x64.fern.trans:after {
+  content: '1x1';
+}
+.magecity.x64.herb-pot {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -64px;
+}
+.magecity.x64.herb-pot.trans:after {
+  content: '1x1';
+}
+.magecity.x64.barrel-sml {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -64px;
+}
+.magecity.x64.barrel-sml.trans:after {
+  content: '1x1';
+}
+.magecity.x64.table {
+  width: 128px;
+  height: 128px;
+  background-position: -320px 0px;
+}
+.magecity.x64.table.trans:after {
+  content: '2x2';
+}
+.magecity.x64.stool-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px 0px;
+}
+.magecity.x64.stool-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stool-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -64px;
+}
+.magecity.x64.stool-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.fern-pillar {
+  width: 64px;
+  height: 128px;
+  background-position: 0px -128px;
+}
+.magecity.x64.fern-pillar.trans:after {
+  content: '1x2';
+}
+.magecity.x64.tree-pot-dead {
+  width: 128px;
+  height: 128px;
+  background-position: -64px -128px;
+}
+.magecity.x64.tree-pot-dead.trans:after {
+  content: '2x2';
+}
+.magecity.x64.tree-pot {
+  width: 64px;
+  height: 128px;
+  background-position: -192px -128px;
+}
+.magecity.x64.tree-pot.trans:after {
+  content: '1x2';
+}
+.magecity.x64.barrel-lg {
+  width: 64px;
+  height: 128px;
+  background-position: -256px -128px;
+}
+.magecity.x64.barrel-lg.trans:after {
+  content: '1x2';
+}
+.magecity.x64.sand-column {
+  width: 64px;
+  height: 128px;
+  background-position: -320px -128px;
+}
+.magecity.x64.sand-column.trans:after {
+  content: '1x2';
+}
+.magecity.x64.sand-fountain {
+  width: 128px;
+  height: 128px;
+  background-position: -384px -128px;
+}
+.magecity.x64.sand-fountain.trans:after {
+  content: '2x2';
+}
+.magecity.x64.sand-wall-edge-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -256px;
+}
+.magecity.x64.sand-wall-edge-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -256px;
+}
+.magecity.x64.sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -256px;
+}
+.magecity.x64.sand-wall-edge-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-left-dark {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -320px;
+}
+.magecity.x64.sand-wall-edge-left-dark.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -320px;
+}
+.magecity.x64.sand-wall-dark.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-right-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -320px;
+}
+.magecity.x64.sand-wall-edge-right-dark.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-top-edge-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -256px;
+}
+.magecity.x64.sand-wall-top-edge-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-top {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -256px;
+}
+.magecity.x64.sand-wall-top.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-top-edge-right {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -256px;
+}
+.magecity.x64.sand-wall-top-edge-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-top-vine {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -320px;
+}
+.magecity.x64.sand-wall-top-vine.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-top-vine-start {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -256px;
+}
+.magecity.x64.sand-wall-top-vine-start.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-top-vine-end {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -320px;
+}
+.magecity.x64.sand-wall-top-vine-end.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-right-vine {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -256px;
+}
+.magecity.x64.sand-wall-edge-right-vine.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-right-vine-end {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -320px;
+}
+.magecity.x64.sand-wall-edge-right-vine-end.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-missing-block-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -320px;
+}
+.magecity.x64.sand-wall-missing-block-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-missing-block-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -320px;
+}
+.magecity.x64.sand-wall-missing-block-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-top-left-water {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -384px;
+}
+.magecity.x64.sand-wall-edge-top-left-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-top-center-water {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -384px;
+}
+.magecity.x64.sand-wall-edge-top-center-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-top-right-water {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -384px;
+}
+.magecity.x64.sand-wall-edge-top-right-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-middle-left-water {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -448px;
+}
+.magecity.x64.sand-wall-edge-middle-left-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-middle-center-water {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -448px;
+}
+.magecity.x64.sand-wall-edge-middle-center-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-edge-middle-right-water {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -448px;
+}
+.magecity.x64.sand-wall-edge-middle-right-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-narrow-top-water {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -384px;
+}
+.magecity.x64.sand-wall-narrow-top-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-narrow-center-water {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -448px;
+}
+.magecity.x64.sand-wall-narrow-center-water.trans:after {
+  content: '1x1';
+}
+.magecity.x64.sand-wall-ground {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -384px;
+}
+.magecity.x64.sand-wall-ground.trans:after {
+  content: '1x1';
+}
+.magecity.x64.wall-grass {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -384px;
+}
+.magecity.x64.wall-grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.oil-lamp {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -384px;
+}
+.magecity.x64.oil-lamp.trans:after {
+  content: '1x1';
+}
+.magecity.x64.spice {
+  width: 32px;
+  height: 64px;
+  background-position: -448px -384px;
+}
+.magecity.x64.spice.trans:after {
+  content: '0.5x1';
+}
+.magecity.x64.stairs-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -448px;
+}
+.magecity.x64.stairs-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -448px;
+}
+.magecity.x64.stairs-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -448px;
+}
+.magecity.x64.stairs-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -512px;
+}
+.magecity.x64.stairs-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -512px;
+}
+.magecity.x64.stairs-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -512px;
+}
+.magecity.x64.stairs-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-narrow {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -448px;
+}
+.magecity.x64.stairs-narrow.trans:after {
+  content: '1x1';
+}
+.magecity.x64.stairs-narrow-bottom {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -512px;
+}
+.magecity.x64.stairs-narrow-bottom.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -576px;
+}
+.magecity.x64.cobble-stone-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -576px;
+}
+.magecity.x64.cobble-stone-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -576px;
+}
+.magecity.x64.cobble-stone-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-middle-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -640px;
+}
+.magecity.x64.cobble-stone-middle-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-middle-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -640px;
+}
+.magecity.x64.cobble-stone-middle-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-middle-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -640px;
+}
+.magecity.x64.cobble-stone-middle-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -704px;
+}
+.magecity.x64.cobble-stone-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -704px;
+}
+.magecity.x64.cobble-stone-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -704px;
+}
+.magecity.x64.cobble-stone-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-2-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -576px;
+}
+.magecity.x64.cobble-stone-2-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-2-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -576px;
+}
+.magecity.x64.cobble-stone-2-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-2-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -640px;
+}
+.magecity.x64.cobble-stone-2-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.cobble-stone-2-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -640px;
+}
+.magecity.x64.cobble-stone-2-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.meal {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -576px;
+}
+.magecity.x64.meal.trans:after {
+  content: '1x1';
+}
+.magecity.x64.meal-empty {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -576px;
+}
+.magecity.x64.meal-empty.trans:after {
+  content: '1x1';
+}
+.magecity.x64.flour {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -576px;
+}
+.magecity.x64.flour.trans:after {
+  content: '1x1';
+}
+.magecity.x64.potions {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -640px;
+}
+.magecity.x64.potions.trans:after {
+  content: '1x1';
+}
+.magecity.x64.tree-candles {
+  width: 64px;
+  height: 192px;
+  background-position: 0px -768px;
+}
+.magecity.x64.tree-candles.trans:after {
+  content: '1x3';
+}
+.magecity.x64.mushrooms {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -768px;
+}
+.magecity.x64.mushrooms.trans:after {
+  content: '1x1';
+}
+.magecity.x64.bird-bath {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -832px;
+}
+.magecity.x64.bird-bath.trans:after {
+  content: '1x2';
+}
+.magecity.x64.woman-statue {
+  width: 64px;
+  height: 192px;
+  background-position: -128px -768px;
+}
+.magecity.x64.woman-statue.trans:after {
+  content: '1x3';
+}
+.magecity.x64.bench {
+  width: 128px;
+  height: 128px;
+  background-position: 0px -960px;
+}
+.magecity.x64.bench.trans:after {
+  content: '2x2';
+}
+.magecity.x64.tree-cursed {
+  width: 128px;
+  height: 256px;
+  background-position: -128px -960px;
+}
+.magecity.x64.tree-cursed.trans:after {
+  content: '2x4';
+}
+.magecity.x64.tree-large {
+  width: 256px;
+  height: 320px;
+  background-position: -256px -896px;
+}
+.magecity.x64.tree-large.trans:after {
+  content: '4x5';
+}
+.magecity.x64.sand-wall-hole {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1216px;
+}
+.magecity.x64.sand-wall-hole.trans:after {
+  content: '1x1';
+}
+.magecity.x64.glass-window-sign {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1280px;
+}
+.magecity.x64.glass-window-sign.trans:after {
+  content: '1x1';
+}
+.magecity.x64.glass-window {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -1216px;
+}
+.magecity.x64.glass-window.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-narrow {
+  width: 64px;
+  height: 128px;
+  background-position: -128px -1216px;
+}
+.magecity.x64.glass-window-narrow.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-narrow-short {
+  width: 64px;
+  height: 128px;
+  background-position: -192px -1216px;
+}
+.magecity.x64.glass-window-narrow-short.trans:after {
+  content: '1x2';
+}
+.magecity.x64.cupid {
+  width: 64px;
+  height: 128px;
+  background-position: -256px -1216px;
+}
+.magecity.x64.cupid.trans:after {
+  content: '1x2';
+}
+.magecity.x64.lantern-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1280px;
+}
+.magecity.x64.lantern-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.lantern-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1280px;
+}
+.magecity.x64.lantern-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.chimney {
+  width: 64px;
+  height: 128px;
+  background-position: -448px -1216px;
+}
+.magecity.x64.chimney.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-right {
+  width: 64px;
+  height: 128px;
+  background-position: 0px -1344px;
+}
+.magecity.x64.glass-window-right.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-left {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -1344px;
+}
+.magecity.x64.glass-window-left.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-center {
+  width: 64px;
+  height: 128px;
+  background-position: -128px -1344px;
+}
+.magecity.x64.glass-window-center.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-center-shutters {
+  width: 64px;
+  height: 128px;
+  background-position: -192px -1344px;
+}
+.magecity.x64.glass-window-center-shutters.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-center-with-trim-right {
+  width: 64px;
+  height: 128px;
+  background-position: -256px -1344px;
+}
+.magecity.x64.glass-window-center-with-trim-right.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-center-with-trim-left {
+  width: 64px;
+  height: 128px;
+  background-position: -320px -1344px;
+}
+.magecity.x64.glass-window-center-with-trim-left.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-narrow-double {
+  width: 64px;
+  height: 128px;
+  background-position: -384px -1344px;
+}
+.magecity.x64.glass-window-narrow-double.trans:after {
+  content: '1x2';
+}
+.magecity.x64.glass-window-with-plants {
+  width: 64px;
+  height: 128px;
+  background-position: -448px -1344px;
+}
+.magecity.x64.glass-window-with-plants.trans:after {
+  content: '1x2';
+}
+.magecity.x64.roof-fill {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1472px;
+}
+.magecity.x64.roof-fill.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-fill-broken {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1472px;
+}
+.magecity.x64.roof-fill-broken.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1472px;
+}
+.magecity.x64.roof-wood-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -1472px;
+}
+.magecity.x64.roof-wood-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1472px;
+}
+.magecity.x64.roof-wood-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-middle-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1536px;
+}
+.magecity.x64.roof-wood-middle-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-middle-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -1536px;
+}
+.magecity.x64.roof-wood-middle-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-middle-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1536px;
+}
+.magecity.x64.roof-wood-middle-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1600px;
+}
+.magecity.x64.roof-wood-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -1600px;
+}
+.magecity.x64.roof-wood-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1600px;
+}
+.magecity.x64.roof-wood-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-front-arch-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1536px;
+}
+.magecity.x64.roof-wood-front-arch-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-wood-front-arch-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1536px;
+}
+.magecity.x64.roof-wood-front-arch-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-wood-top-left_grass {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1472px, 0px 0px;
+}
+.magecity.x64.double.roof-wood-top-left_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-wood-top-right_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1472px, 0px 0px;
+}
+.magecity.x64.double.roof-wood-top-right_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-wood-top-left_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1472px, -64px -256px;
+}
+.magecity.x64.double.roof-wood-top-left_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-wood-top-right_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1472px, -64px -256px;
+}
+.magecity.x64.double.roof-wood-top-right_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1472px;
+}
+.magecity.x64.roof-bamboo-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1472px;
+}
+.magecity.x64.roof-bamboo-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1472px;
+}
+.magecity.x64.roof-bamboo-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-middle-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1536px;
+}
+.magecity.x64.roof-bamboo-middle-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-middle-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1536px;
+}
+.magecity.x64.roof-bamboo-middle-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-middle-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1536px;
+}
+.magecity.x64.roof-bamboo-middle-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1600px;
+}
+.magecity.x64.roof-bamboo-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1600px;
+}
+.magecity.x64.roof-bamboo-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1600px;
+}
+.magecity.x64.roof-bamboo-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-front-arch-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1600px;
+}
+.magecity.x64.roof-bamboo-front-arch-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.roof-bamboo-front-arch-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1600px;
+}
+.magecity.x64.roof-bamboo-front-arch-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-bamboo-top-left_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1472px, 0px 0px;
+}
+.magecity.x64.double.roof-bamboo-top-left_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-bamboo-top-right_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1472px, 0px 0px;
+}
+.magecity.x64.double.roof-bamboo-top-right_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-bamboo-top-left_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1472px, -64px -256px;
+}
+.magecity.x64.double.roof-bamboo-top-left_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.roof-bamboo-top-right_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1472px, -64px -256px;
+}
+.magecity.x64.double.roof-bamboo-top-right_sand-wall.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-to-stone-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1664px;
+}
+.magecity.x64.grass-to-stone-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-to-stone-right {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1728px;
+}
+.magecity.x64.grass-to-stone-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-to-stone-bottom {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1792px;
+}
+.magecity.x64.grass-to-stone-bottom.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-to-stone-top {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1856px;
+}
+.magecity.x64.grass-to-stone-top.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-with-stone-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1856px;
+}
+.magecity.x64.grass-with-stone-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-with-stone-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1856px;
+}
+.magecity.x64.grass-with-stone-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-with-stone-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1856px;
+}
+.magecity.x64.grass-with-stone-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-with-stone-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1856px;
+}
+.magecity.x64.grass-with-stone-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1664px;
+}
+.magecity.x64.grass-shadow-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-top-left-short {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1728px;
+}
+.magecity.x64.grass-shadow-top-left-short.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1792px;
+}
+.magecity.x64.grass-shadow-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1664px;
+}
+.magecity.x64.brick-shadow-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1664px;
+}
+.magecity.x64.brick-shadow-top-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1664px;
+}
+.magecity.x64.brick-shadow-top-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1728px;
+}
+.magecity.x64.brick-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1728px;
+}
+.magecity.x64.brick-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1728px;
+}
+.magecity.x64.brick-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-grass-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1792px;
+}
+.magecity.x64.brick-grass-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-grass-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1792px;
+}
+.magecity.x64.brick-grass-bottom-center.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-grass-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1792px;
+}
+.magecity.x64.brick-grass-bottom-right.trans:after {
+  content: '1x1';
+}
+.magecity.x64.tree-leaves-sml {
+  z-index: 2;
+  width: 192px;
+  height: 192px;
+  background-position: 0px -1920px;
+  -webkit-transform: translate(-64px, -64px);
+  -moz-transform: translate(-64px, -64px);
+  -ms-transform: translate(-64px, -64px);
+  -o-transform: translate(-64px, -64px);
+  transform: translate(-64px, -64px);
+}
+.magecity.x64.tree-leaves-sml.trans:after {
+  content: '3x3';
+}
+.magecity.x64.tree-leaves-big {
+  z-index: 2;
+  width: 192px;
+  height: 192px;
+  background-position: -192px -1920px;
+  -webkit-transform: translate(-64px, -64px);
+  -moz-transform: translate(-64px, -64px);
+  -ms-transform: translate(-64px, -64px);
+  -o-transform: translate(-64px, -64px);
+  transform: translate(-64px, -64px);
+}
+.magecity.x64.tree-leaves-big.trans:after {
+  content: '3x3';
+}
+.magecity.x64.desk-right {
+  width: 128px;
+  height: 64px;
+  background-position: -384px -1920px;
+}
+.magecity.x64.desk-right.trans:after {
+  content: '2x1';
+}
+.magecity.x64.desk-left {
+  width: 128px;
+  height: 64px;
+  background-position: -384px -1984px;
+}
+.magecity.x64.desk-left.trans:after {
+  content: '2x1';
+}
+.magecity.x64.pumpkin {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2048px;
+}
+.magecity.x64.pumpkin.trans:after {
+  content: '1x1';
+}
+.magecity.x64.pumpkins {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2112px;
+}
+.magecity.x64.pumpkins.trans:after {
+  content: '1x1';
+}
+.magecity.x64.leaves-2 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2112px;
+}
+.magecity.x64.leaves-2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.leaves-3 {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2112px;
+}
+.magecity.x64.leaves-3.trans:after {
+  content: '1x1';
+}
+.magecity.x64.leaves-4 {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2176px;
+}
+.magecity.x64.leaves-4.trans:after {
+  content: '1x1';
+}
+.magecity.x64.leaves-5 {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2048px;
+}
+.magecity.x64.leaves-5.trans:after {
+  content: '1x1';
+}
+.magecity.x64.leaves-5-1 {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2176px;
+}
+.magecity.x64.leaves-5-1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.pumpkin_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2048px, 0px 0px;
+}
+.magecity.x64.double.pumpkin_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.pumpkins_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2112px, 0px 0px;
+}
+.magecity.x64.double.pumpkins_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.leaves-2_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2112px, 0px 0px;
+}
+.magecity.x64.double.leaves-2_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.leaves-3_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2112px, 0px 0px;
+}
+.magecity.x64.double.leaves-3_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.leaves-4_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2176px, 0px 0px;
+}
+.magecity.x64.double.leaves-4_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.leaves-5_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2048px, 0px 0px;
+}
+.magecity.x64.double.leaves-5_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.double.leaves-5-1_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2176px, 0px 0px;
+}
+.magecity.x64.double.leaves-5-1_grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-1-0x0 {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2112px;
+}
+.magecity.x64.grass-dirt-patch-1-0x0.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-1-1x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2112px;
+}
+.magecity.x64.grass-dirt-patch-1-1x0.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-1-0x1 {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2176px;
+}
+.magecity.x64.grass-dirt-patch-1-0x1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-1-1x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2176px;
+}
+.magecity.x64.grass-dirt-patch-1-1x1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-0x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2112px;
+}
+.magecity.x64.grass-dirt-patch-2-0x0.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-1x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2112px;
+}
+.magecity.x64.grass-dirt-patch-2-1x0.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-2x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2112px;
+}
+.magecity.x64.grass-dirt-patch-2-2x0.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-0x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2176px;
+}
+.magecity.x64.grass-dirt-patch-2-0x1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-1x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2176px;
+}
+.magecity.x64.grass-dirt-patch-2-1x1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-2x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2176px;
+}
+.magecity.x64.grass-dirt-patch-2-2x1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-3x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2176px;
+}
+.magecity.x64.grass-dirt-patch-2-3x1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-0x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2240px;
+}
+.magecity.x64.grass-dirt-patch-2-0x2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-1x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2240px;
+}
+.magecity.x64.grass-dirt-patch-2-1x2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-2x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2240px;
+}
+.magecity.x64.grass-dirt-patch-2-2x2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-dirt-patch-2-3x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2240px;
+}
+.magecity.x64.grass-dirt-patch-2-3x2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-smash-1 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2304px;
+}
+.magecity.x64.grass-smash-1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-smash-2 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2304px;
+}
+.magecity.x64.grass-smash-2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-cherries-1 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2304px;
+}
+.magecity.x64.grass-cherries-1.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-cherries-2 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2304px;
+}
+.magecity.x64.grass-cherries-2.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2240px;
+}
+.magecity.x64.grass-shadow-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-overlay-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2304px;
+}
+.magecity.x64.grass-shadow-overlay-bottom-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-overlay-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2240px;
+}
+.magecity.x64.grass-shadow-overlay-top-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-overlay-top-left-short {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2304px;
+}
+.magecity.x64.grass-shadow-overlay-top-left-short.trans:after {
+  content: '1x1';
+}
+.magecity.x64.grass-shadow-overlay-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2368px;
+}
+.magecity.x64.grass-shadow-overlay-left.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-top-left-corner {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2240px;
+}
+.magecity.x64.brick-shadow-top-left-corner.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-top-left-corner-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2240px;
+}
+.magecity.x64.brick-shadow-top-left-corner-dark.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-left-edge {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2304px;
+}
+.magecity.x64.brick-shadow-left-edge.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-left-edge-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2304px;
+}
+.magecity.x64.brick-shadow-left-edge-dark.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-left-edge-grass {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2368px;
+}
+.magecity.x64.brick-shadow-left-edge-grass.trans:after {
+  content: '1x1';
+}
+.magecity.x64.brick-shadow-left-edge-grass-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2368px;
+}
+.magecity.x64.brick-shadow-left-edge-grass-dark.trans:after {
+  content: '1x1';
+}
+.magecity.x64.doorway {
+  z-index: 0;
+  width: 64px;
+  height: 128px;
+  background-position: -384px -2560px;
+  -webkit-transform: translate(0px, -64px);
+  -moz-transform: translate(0px, -64px);
+  -ms-transform: translate(0px, -64px);
+  -o-transform: translate(0px, -64px);
+  transform: translate(0px, -64px);
+}
+.magecity.x64.doorway.trans:after {
+  content: '1x2';
+}
+.magecity.x64.doorway-down-stone {
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2752px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.magecity.x64.doorway-down-stone.trans:after {
+  content: '1x1';
+}
+.magecity.x64.doorway-down-cobble-stone {
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2752px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.magecity.x64.doorway-down-cobble-stone.trans:after {
+  content: '1x1';
+}
+.x64 .magecity {
+  background-image: url(magecity_0.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 512px 2904px;
+  -moz-background-size: 512px 2904px;
+  -ms-background-size: 512px 2904px;
+  -o-background-size: 512px 2904px;
+  background-size: 512px 2904px;
+}
+.x64 .magecity.double {
+  background: url(magecity_0.png) no-repeat, url(magecity_0.png) no-repeat;
+}
+.x64 .magecity.tripple {
+  background: url(magecity_0.png) no-repeat, url(magecity_0.png) no-repeat, url(magecity_0.png) no-repeat;
+}
+.x64 .magecity.grass {
+  width: 64px;
+  height: 64px;
+  background-position: 0px 0px;
+}
+.x64 .magecity.grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.blank {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -64px;
+}
+.x64 .magecity.blank.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stone {
+  width: 64px;
+  height: 64px;
+  background-position: -64px 0px;
+}
+.x64 .magecity.stone.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stone-weed {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -64px;
+}
+.x64 .magecity.stone-weed.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.herb-full {
+  width: 64px;
+  height: 64px;
+  background-position: -128px 0px;
+}
+.x64 .magecity.herb-full.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.herb-half {
+  width: 64px;
+  height: 64px;
+  background-position: -192px 0px;
+}
+.x64 .magecity.herb-half.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.plant-pot {
+  width: 64px;
+  height: 64px;
+  background-position: -256px 0px;
+}
+.x64 .magecity.plant-pot.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.fern {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -64px;
+}
+.x64 .magecity.fern.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.herb-pot {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -64px;
+}
+.x64 .magecity.herb-pot.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.barrel-sml {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -64px;
+}
+.x64 .magecity.barrel-sml.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.table {
+  width: 128px;
+  height: 128px;
+  background-position: -320px 0px;
+}
+.x64 .magecity.table.trans:after {
+  content: '2x2';
+}
+.x64 .magecity.stool-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px 0px;
+}
+.x64 .magecity.stool-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stool-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -64px;
+}
+.x64 .magecity.stool-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.fern-pillar {
+  width: 64px;
+  height: 128px;
+  background-position: 0px -128px;
+}
+.x64 .magecity.fern-pillar.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.tree-pot-dead {
+  width: 128px;
+  height: 128px;
+  background-position: -64px -128px;
+}
+.x64 .magecity.tree-pot-dead.trans:after {
+  content: '2x2';
+}
+.x64 .magecity.tree-pot {
+  width: 64px;
+  height: 128px;
+  background-position: -192px -128px;
+}
+.x64 .magecity.tree-pot.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.barrel-lg {
+  width: 64px;
+  height: 128px;
+  background-position: -256px -128px;
+}
+.x64 .magecity.barrel-lg.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.sand-column {
+  width: 64px;
+  height: 128px;
+  background-position: -320px -128px;
+}
+.x64 .magecity.sand-column.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.sand-fountain {
+  width: 128px;
+  height: 128px;
+  background-position: -384px -128px;
+}
+.x64 .magecity.sand-fountain.trans:after {
+  content: '2x2';
+}
+.x64 .magecity.sand-wall-edge-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -256px;
+}
+.x64 .magecity.sand-wall-edge-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -256px;
+}
+.x64 .magecity.sand-wall.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -256px;
+}
+.x64 .magecity.sand-wall-edge-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-left-dark {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -320px;
+}
+.x64 .magecity.sand-wall-edge-left-dark.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -320px;
+}
+.x64 .magecity.sand-wall-dark.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-right-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -320px;
+}
+.x64 .magecity.sand-wall-edge-right-dark.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-top-edge-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -256px;
+}
+.x64 .magecity.sand-wall-top-edge-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-top {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -256px;
+}
+.x64 .magecity.sand-wall-top.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-top-edge-right {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -256px;
+}
+.x64 .magecity.sand-wall-top-edge-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-top-vine {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -320px;
+}
+.x64 .magecity.sand-wall-top-vine.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-top-vine-start {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -256px;
+}
+.x64 .magecity.sand-wall-top-vine-start.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-top-vine-end {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -320px;
+}
+.x64 .magecity.sand-wall-top-vine-end.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-right-vine {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -256px;
+}
+.x64 .magecity.sand-wall-edge-right-vine.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-right-vine-end {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -320px;
+}
+.x64 .magecity.sand-wall-edge-right-vine-end.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-missing-block-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -320px;
+}
+.x64 .magecity.sand-wall-missing-block-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-missing-block-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -320px;
+}
+.x64 .magecity.sand-wall-missing-block-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-top-left-water {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -384px;
+}
+.x64 .magecity.sand-wall-edge-top-left-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-top-center-water {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -384px;
+}
+.x64 .magecity.sand-wall-edge-top-center-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-top-right-water {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -384px;
+}
+.x64 .magecity.sand-wall-edge-top-right-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-middle-left-water {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -448px;
+}
+.x64 .magecity.sand-wall-edge-middle-left-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-middle-center-water {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -448px;
+}
+.x64 .magecity.sand-wall-edge-middle-center-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-edge-middle-right-water {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -448px;
+}
+.x64 .magecity.sand-wall-edge-middle-right-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-narrow-top-water {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -384px;
+}
+.x64 .magecity.sand-wall-narrow-top-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-narrow-center-water {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -448px;
+}
+.x64 .magecity.sand-wall-narrow-center-water.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.sand-wall-ground {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -384px;
+}
+.x64 .magecity.sand-wall-ground.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.wall-grass {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -384px;
+}
+.x64 .magecity.wall-grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.oil-lamp {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -384px;
+}
+.x64 .magecity.oil-lamp.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.spice {
+  width: 32px;
+  height: 64px;
+  background-position: -448px -384px;
+}
+.x64 .magecity.spice.trans:after {
+  content: '0.5x1';
+}
+.x64 .magecity.stairs-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -448px;
+}
+.x64 .magecity.stairs-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -448px;
+}
+.x64 .magecity.stairs-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -448px;
+}
+.x64 .magecity.stairs-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -512px;
+}
+.x64 .magecity.stairs-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -512px;
+}
+.x64 .magecity.stairs-bottom-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -512px;
+}
+.x64 .magecity.stairs-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-narrow {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -448px;
+}
+.x64 .magecity.stairs-narrow.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.stairs-narrow-bottom {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -512px;
+}
+.x64 .magecity.stairs-narrow-bottom.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -576px;
+}
+.x64 .magecity.cobble-stone-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -576px;
+}
+.x64 .magecity.cobble-stone-top-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -576px;
+}
+.x64 .magecity.cobble-stone-top-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-middle-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -640px;
+}
+.x64 .magecity.cobble-stone-middle-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-middle-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -640px;
+}
+.x64 .magecity.cobble-stone-middle-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-middle-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -640px;
+}
+.x64 .magecity.cobble-stone-middle-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -704px;
+}
+.x64 .magecity.cobble-stone-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -704px;
+}
+.x64 .magecity.cobble-stone-bottom-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -704px;
+}
+.x64 .magecity.cobble-stone-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-2-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -576px;
+}
+.x64 .magecity.cobble-stone-2-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-2-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -576px;
+}
+.x64 .magecity.cobble-stone-2-top-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-2-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -640px;
+}
+.x64 .magecity.cobble-stone-2-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.cobble-stone-2-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -640px;
+}
+.x64 .magecity.cobble-stone-2-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.meal {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -576px;
+}
+.x64 .magecity.meal.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.meal-empty {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -576px;
+}
+.x64 .magecity.meal-empty.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.flour {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -576px;
+}
+.x64 .magecity.flour.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.potions {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -640px;
+}
+.x64 .magecity.potions.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.tree-candles {
+  width: 64px;
+  height: 192px;
+  background-position: 0px -768px;
+}
+.x64 .magecity.tree-candles.trans:after {
+  content: '1x3';
+}
+.x64 .magecity.mushrooms {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -768px;
+}
+.x64 .magecity.mushrooms.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.bird-bath {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -832px;
+}
+.x64 .magecity.bird-bath.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.woman-statue {
+  width: 64px;
+  height: 192px;
+  background-position: -128px -768px;
+}
+.x64 .magecity.woman-statue.trans:after {
+  content: '1x3';
+}
+.x64 .magecity.bench {
+  width: 128px;
+  height: 128px;
+  background-position: 0px -960px;
+}
+.x64 .magecity.bench.trans:after {
+  content: '2x2';
+}
+.x64 .magecity.tree-cursed {
+  width: 128px;
+  height: 256px;
+  background-position: -128px -960px;
+}
+.x64 .magecity.tree-cursed.trans:after {
+  content: '2x4';
+}
+.x64 .magecity.tree-large {
+  width: 256px;
+  height: 320px;
+  background-position: -256px -896px;
+}
+.x64 .magecity.tree-large.trans:after {
+  content: '4x5';
+}
+.x64 .magecity.sand-wall-hole {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1216px;
+}
+.x64 .magecity.sand-wall-hole.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.glass-window-sign {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1280px;
+}
+.x64 .magecity.glass-window-sign.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.glass-window {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -1216px;
+}
+.x64 .magecity.glass-window.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-narrow {
+  width: 64px;
+  height: 128px;
+  background-position: -128px -1216px;
+}
+.x64 .magecity.glass-window-narrow.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-narrow-short {
+  width: 64px;
+  height: 128px;
+  background-position: -192px -1216px;
+}
+.x64 .magecity.glass-window-narrow-short.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.cupid {
+  width: 64px;
+  height: 128px;
+  background-position: -256px -1216px;
+}
+.x64 .magecity.cupid.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.lantern-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1280px;
+}
+.x64 .magecity.lantern-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.lantern-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1280px;
+}
+.x64 .magecity.lantern-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.chimney {
+  width: 64px;
+  height: 128px;
+  background-position: -448px -1216px;
+}
+.x64 .magecity.chimney.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-right {
+  width: 64px;
+  height: 128px;
+  background-position: 0px -1344px;
+}
+.x64 .magecity.glass-window-right.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-left {
+  width: 64px;
+  height: 128px;
+  background-position: -64px -1344px;
+}
+.x64 .magecity.glass-window-left.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-center {
+  width: 64px;
+  height: 128px;
+  background-position: -128px -1344px;
+}
+.x64 .magecity.glass-window-center.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-center-shutters {
+  width: 64px;
+  height: 128px;
+  background-position: -192px -1344px;
+}
+.x64 .magecity.glass-window-center-shutters.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-center-with-trim-right {
+  width: 64px;
+  height: 128px;
+  background-position: -256px -1344px;
+}
+.x64 .magecity.glass-window-center-with-trim-right.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-center-with-trim-left {
+  width: 64px;
+  height: 128px;
+  background-position: -320px -1344px;
+}
+.x64 .magecity.glass-window-center-with-trim-left.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-narrow-double {
+  width: 64px;
+  height: 128px;
+  background-position: -384px -1344px;
+}
+.x64 .magecity.glass-window-narrow-double.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.glass-window-with-plants {
+  width: 64px;
+  height: 128px;
+  background-position: -448px -1344px;
+}
+.x64 .magecity.glass-window-with-plants.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.roof-fill {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1472px;
+}
+.x64 .magecity.roof-fill.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-fill-broken {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1472px;
+}
+.x64 .magecity.roof-fill-broken.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1472px;
+}
+.x64 .magecity.roof-wood-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -1472px;
+}
+.x64 .magecity.roof-wood-top-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1472px;
+}
+.x64 .magecity.roof-wood-top-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-middle-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1536px;
+}
+.x64 .magecity.roof-wood-middle-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-middle-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -1536px;
+}
+.x64 .magecity.roof-wood-middle-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-middle-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1536px;
+}
+.x64 .magecity.roof-wood-middle-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1600px;
+}
+.x64 .magecity.roof-wood-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -1600px;
+}
+.x64 .magecity.roof-wood-bottom-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1600px;
+}
+.x64 .magecity.roof-wood-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-front-arch-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1536px;
+}
+.x64 .magecity.roof-wood-front-arch-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-wood-front-arch-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1536px;
+}
+.x64 .magecity.roof-wood-front-arch-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-wood-top-left_grass {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1472px, 0px 0px;
+}
+.x64 .magecity.double.roof-wood-top-left_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-wood-top-right_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1472px, 0px 0px;
+}
+.x64 .magecity.double.roof-wood-top-right_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-wood-top-left_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -1472px, -64px -256px;
+}
+.x64 .magecity.double.roof-wood-top-left_sand-wall.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-wood-top-right_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -1472px, -64px -256px;
+}
+.x64 .magecity.double.roof-wood-top-right_sand-wall.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1472px;
+}
+.x64 .magecity.roof-bamboo-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1472px;
+}
+.x64 .magecity.roof-bamboo-top-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1472px;
+}
+.x64 .magecity.roof-bamboo-top-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-middle-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1536px;
+}
+.x64 .magecity.roof-bamboo-middle-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-middle-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1536px;
+}
+.x64 .magecity.roof-bamboo-middle-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-middle-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1536px;
+}
+.x64 .magecity.roof-bamboo-middle-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1600px;
+}
+.x64 .magecity.roof-bamboo-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1600px;
+}
+.x64 .magecity.roof-bamboo-bottom-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1600px;
+}
+.x64 .magecity.roof-bamboo-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-front-arch-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1600px;
+}
+.x64 .magecity.roof-bamboo-front-arch-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.roof-bamboo-front-arch-right {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1600px;
+}
+.x64 .magecity.roof-bamboo-front-arch-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-bamboo-top-left_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1472px, 0px 0px;
+}
+.x64 .magecity.double.roof-bamboo-top-left_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-bamboo-top-right_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1472px, 0px 0px;
+}
+.x64 .magecity.double.roof-bamboo-top-right_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-bamboo-top-left_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1472px, -64px -256px;
+}
+.x64 .magecity.double.roof-bamboo-top-left_sand-wall.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.roof-bamboo-top-right_sand-wall {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1472px, -64px -256px;
+}
+.x64 .magecity.double.roof-bamboo-top-right_sand-wall.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-to-stone-left {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1664px;
+}
+.x64 .magecity.grass-to-stone-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-to-stone-right {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1728px;
+}
+.x64 .magecity.grass-to-stone-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-to-stone-bottom {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1792px;
+}
+.x64 .magecity.grass-to-stone-bottom.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-to-stone-top {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -1856px;
+}
+.x64 .magecity.grass-to-stone-top.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-with-stone-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1856px;
+}
+.x64 .magecity.grass-with-stone-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-with-stone-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1856px;
+}
+.x64 .magecity.grass-with-stone-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-with-stone-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1856px;
+}
+.x64 .magecity.grass-with-stone-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-with-stone-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1856px;
+}
+.x64 .magecity.grass-with-stone-top-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1664px;
+}
+.x64 .magecity.grass-shadow-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-top-left-short {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1728px;
+}
+.x64 .magecity.grass-shadow-top-left-short.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -1792px;
+}
+.x64 .magecity.grass-shadow-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1664px;
+}
+.x64 .magecity.brick-shadow-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-top-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1664px;
+}
+.x64 .magecity.brick-shadow-top-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-top-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1664px;
+}
+.x64 .magecity.brick-shadow-top-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1728px;
+}
+.x64 .magecity.brick-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1728px;
+}
+.x64 .magecity.brick-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1728px;
+}
+.x64 .magecity.brick-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-grass-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -1792px;
+}
+.x64 .magecity.brick-grass-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-grass-bottom-center {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -1792px;
+}
+.x64 .magecity.brick-grass-bottom-center.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-grass-bottom-right {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -1792px;
+}
+.x64 .magecity.brick-grass-bottom-right.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.tree-leaves-sml {
+  z-index: 2;
+  width: 192px;
+  height: 192px;
+  background-position: 0px -1920px;
+  -webkit-transform: translate(-64px, -64px);
+  -moz-transform: translate(-64px, -64px);
+  -ms-transform: translate(-64px, -64px);
+  -o-transform: translate(-64px, -64px);
+  transform: translate(-64px, -64px);
+}
+.x64 .magecity.tree-leaves-sml.trans:after {
+  content: '3x3';
+}
+.x64 .magecity.tree-leaves-big {
+  z-index: 2;
+  width: 192px;
+  height: 192px;
+  background-position: -192px -1920px;
+  -webkit-transform: translate(-64px, -64px);
+  -moz-transform: translate(-64px, -64px);
+  -ms-transform: translate(-64px, -64px);
+  -o-transform: translate(-64px, -64px);
+  transform: translate(-64px, -64px);
+}
+.x64 .magecity.tree-leaves-big.trans:after {
+  content: '3x3';
+}
+.x64 .magecity.desk-right {
+  width: 128px;
+  height: 64px;
+  background-position: -384px -1920px;
+}
+.x64 .magecity.desk-right.trans:after {
+  content: '2x1';
+}
+.x64 .magecity.desk-left {
+  width: 128px;
+  height: 64px;
+  background-position: -384px -1984px;
+}
+.x64 .magecity.desk-left.trans:after {
+  content: '2x1';
+}
+.x64 .magecity.pumpkin {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2048px;
+}
+.x64 .magecity.pumpkin.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.pumpkins {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2112px;
+}
+.x64 .magecity.pumpkins.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.leaves-2 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2112px;
+}
+.x64 .magecity.leaves-2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.leaves-3 {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2112px;
+}
+.x64 .magecity.leaves-3.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.leaves-4 {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2176px;
+}
+.x64 .magecity.leaves-4.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.leaves-5 {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2048px;
+}
+.x64 .magecity.leaves-5.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.leaves-5-1 {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2176px;
+}
+.x64 .magecity.leaves-5-1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.pumpkin_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2048px, 0px 0px;
+}
+.x64 .magecity.double.pumpkin_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.pumpkins_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2112px, 0px 0px;
+}
+.x64 .magecity.double.pumpkins_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.leaves-2_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2112px, 0px 0px;
+}
+.x64 .magecity.double.leaves-2_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.leaves-3_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2112px, 0px 0px;
+}
+.x64 .magecity.double.leaves-3_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.leaves-4_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2176px, 0px 0px;
+}
+.x64 .magecity.double.leaves-4_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.leaves-5_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2048px, 0px 0px;
+}
+.x64 .magecity.double.leaves-5_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.double.leaves-5-1_grass {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2176px, 0px 0px;
+}
+.x64 .magecity.double.leaves-5-1_grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-1-0x0 {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2112px;
+}
+.x64 .magecity.grass-dirt-patch-1-0x0.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-1-1x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2112px;
+}
+.x64 .magecity.grass-dirt-patch-1-1x0.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-1-0x1 {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2176px;
+}
+.x64 .magecity.grass-dirt-patch-1-0x1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-1-1x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2176px;
+}
+.x64 .magecity.grass-dirt-patch-1-1x1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-0x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2112px;
+}
+.x64 .magecity.grass-dirt-patch-2-0x0.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-1x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2112px;
+}
+.x64 .magecity.grass-dirt-patch-2-1x0.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-2x0 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2112px;
+}
+.x64 .magecity.grass-dirt-patch-2-2x0.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-0x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2176px;
+}
+.x64 .magecity.grass-dirt-patch-2-0x1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-1x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2176px;
+}
+.x64 .magecity.grass-dirt-patch-2-1x1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-2x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2176px;
+}
+.x64 .magecity.grass-dirt-patch-2-2x1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-3x1 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2176px;
+}
+.x64 .magecity.grass-dirt-patch-2-3x1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-0x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2240px;
+}
+.x64 .magecity.grass-dirt-patch-2-0x2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-1x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2240px;
+}
+.x64 .magecity.grass-dirt-patch-2-1x2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-2x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2240px;
+}
+.x64 .magecity.grass-dirt-patch-2-2x2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-dirt-patch-2-3x2 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2240px;
+}
+.x64 .magecity.grass-dirt-patch-2-3x2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-smash-1 {
+  width: 64px;
+  height: 64px;
+  background-position: -128px -2304px;
+}
+.x64 .magecity.grass-smash-1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-smash-2 {
+  width: 64px;
+  height: 64px;
+  background-position: -192px -2304px;
+}
+.x64 .magecity.grass-smash-2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-cherries-1 {
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2304px;
+}
+.x64 .magecity.grass-cherries-1.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-cherries-2 {
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2304px;
+}
+.x64 .magecity.grass-cherries-2.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2240px;
+}
+.x64 .magecity.grass-shadow-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-overlay-bottom-left {
+  width: 64px;
+  height: 64px;
+  background-position: -384px -2304px;
+}
+.x64 .magecity.grass-shadow-overlay-bottom-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-overlay-top-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2240px;
+}
+.x64 .magecity.grass-shadow-overlay-top-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-overlay-top-left-short {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2304px;
+}
+.x64 .magecity.grass-shadow-overlay-top-left-short.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.grass-shadow-overlay-left {
+  width: 64px;
+  height: 64px;
+  background-position: -448px -2368px;
+}
+.x64 .magecity.grass-shadow-overlay-left.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-top-left-corner {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2240px;
+}
+.x64 .magecity.brick-shadow-top-left-corner.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-top-left-corner-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2240px;
+}
+.x64 .magecity.brick-shadow-top-left-corner-dark.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-left-edge {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2304px;
+}
+.x64 .magecity.brick-shadow-left-edge.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-left-edge-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2304px;
+}
+.x64 .magecity.brick-shadow-left-edge-dark.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-left-edge-grass {
+  width: 64px;
+  height: 64px;
+  background-position: 0px -2368px;
+}
+.x64 .magecity.brick-shadow-left-edge-grass.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.brick-shadow-left-edge-grass-dark {
+  width: 64px;
+  height: 64px;
+  background-position: -64px -2368px;
+}
+.x64 .magecity.brick-shadow-left-edge-grass-dark.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.doorway {
+  z-index: 0;
+  width: 64px;
+  height: 128px;
+  background-position: -384px -2560px;
+  -webkit-transform: translate(0px, -64px);
+  -moz-transform: translate(0px, -64px);
+  -ms-transform: translate(0px, -64px);
+  -o-transform: translate(0px, -64px);
+  transform: translate(0px, -64px);
+}
+.x64 .magecity.doorway.trans:after {
+  content: '1x2';
+}
+.x64 .magecity.doorway-down-stone {
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+  background-position: -256px -2752px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.x64 .magecity.doorway-down-stone.trans:after {
+  content: '1x1';
+}
+.x64 .magecity.doorway-down-cobble-stone {
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+  background-position: -320px -2752px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.x64 .magecity.doorway-down-cobble-stone.trans:after {
+  content: '1x1';
+}

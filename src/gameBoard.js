@@ -1,14 +1,16 @@
-define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointOnCircle'], function (dispatcher, tile, getDistance, getAngle, getPointOnCircle) {
+define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointOnCircle', 'each', 'http', 'defer', 'matchAll'], function (dispatcher, tile, getDistance, getAngle, getPointOnCircle, each, http, defer, matchAll) {
 
     var events = {
         TILE_RENDER_CHANGE: 'tile-render-change',
         AFTER_KEEP_IN_BOUNDS: 'after-keep-in-bounds',
         BEFORE_RENDER: 'before-render',
         AFTER_RENDER: 'after-render',
-        TOUCHING_ITEMS: 'touching-items'
+        TOUCHING_ITEMS: 'touching-items',
+        ERROR: 'error',
+        READY: 'ready'
     };
 
-    function TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath) {
+    function TileGameBoard(el, viewWidth, viewHeight, boardDataOrUrl, tileTypePath) {
         var self = this;
         self.events = events;
         var target;
@@ -18,13 +20,72 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         var viewEl = document.createElement('div');
             viewEl.classList.add('view');
             el.appendChild(viewEl);
-        var vw = viewWidth + 2;
-        var vh = viewHeight + 2;
-        var padX = Math.floor(vw * 0.5);
-        var padY = Math.floor(vh * 0.5);
-        var xlen = boardData[0].length;
-        var ylen = boardData.length;
+        var vw;
+        var vh;
+        var padX;
+        var padY;
+        var boardData;
+        var xlen;
+        var ylen;
         var tileSize;
+        var deferred;
+//TODO: needs to be external so we can switch maps
+        function load(boardDataOrUrl) {
+            deferred = defer();
+            // remove all items.
+            while(items.length) {
+                self.removeItem(items[0]);
+            }
+            self.addItem(target);
+            if (typeof boardDataOrUrl === "string") {
+                http.get({url: boardDataOrUrl, success: onLoadSuccess, error: onLoadFail});
+            } else {
+                onLoadSuccess({data: {boardData: boardDataOrUrl}});
+            }
+        }
+
+        function onLoadSuccess(response) {
+            var data = response.data;
+            boardData = data.boardData;
+            var myVW = viewWidth > data.visibleMaxWidth ? data.visibleMaxWidth : viewWidth;
+            var myVH = viewHeight > data.visibleMaxHeight ? data.visibleMaxHeight : viewHeight;
+            vw = myVW + 2;
+            vh = myVH + 2;
+            padX = Math.floor(vw * 0.5);
+            padY = Math.floor(vh * 0.5);
+            xlen = boardData[0].length;
+            ylen = boardData.length;
+//TODO: clear tiles so we can switch maps.
+            viewEl.innerHTML = '';
+            tiles.length = 0;
+            // create tiles
+            eachTile(renderTile);
+            tileSize = tiles[0][0].size();
+            viewEl.style.width = vw * tileSize + 'px';
+            viewEl.style.height = vh * tileSize + 'px';
+            el.style.width = myVW * tileSize + 'px';
+            el.style.height = myVH * tileSize + 'px';
+
+            deferred.resolve(boardData);
+            deferred = null;
+
+            // add items to the board.
+            if (response.data.items) {
+                each(response.data.items, self.addItem);
+            }
+            // if they don't specify a starting position that matches. then they get the first one
+            if (!matchAll(data.startingPositions, {x:target.x, y:target.y}).length) {
+                target.x = data.startingPositions[0].x;
+                target.y = data.startingPositions[0].y;
+            }
+
+            render();
+            self.dispatch(events.READY);
+        }
+
+        function onLoadFail() {
+            self.dispatch(events.ERROR, "Unable to load " + boardDataOrUrl);
+        }
 
         function eachTile(fn, dataOffsetPoint) {
             for (var x = 0; x < vw; x += 1) {
@@ -36,14 +97,13 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             }
         }
 
-
         function renderTile(tile, x, y, dataOffsetPoint) {
-            if (target) {
+            if (target && dataOffsetPoint) {
                 var ox = Math.floor(target.x) - padX + x - dataOffsetPoint.x;
                 var oy = Math.floor(target.y) - padY + y - dataOffsetPoint.y;
                 tile.data(boardData[oy] && boardData[oy][ox]);
+                tile.render(ox, oy);
             }
-            tile.render(ox, oy);
         }
 
         function updateTarget() {
@@ -150,33 +210,40 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         }
 
         function render() {
-            self.dispatch(events.BEFORE_RENDER);
-            var dataOffsetPoint = updateTarget();
-            var oxp = (viewOffset.x - dataOffsetPoint.vx);
-            var oyp = (viewOffset.y - dataOffsetPoint.vy);
-            viewEl.style.transform = "translate(" + (oxp * tileSize) + "px, " + (oyp * tileSize) + "px)";
-            updateItems(dataOffsetPoint);
-            eachTile(renderTile, dataOffsetPoint);
-            self.dispatch(events.AFTER_RENDER);
-        }
-
-        function createTiles() {
-            eachTile(renderTile);
-            tileSize = tiles[0][0].size();
-            viewEl.style.width = vw * tileSize + 'px';
-            viewEl.style.height = vh * tileSize + 'px';
-            el.style.width = viewWidth * tileSize + 'px';
-            el.style.height = viewHeight * tileSize + 'px';
+            if (!deferred) {
+                self.dispatch(events.BEFORE_RENDER);
+                var dataOffsetPoint = updateTarget();
+                var oxp = (viewOffset.x - dataOffsetPoint.vx);
+                var oyp = (viewOffset.y - dataOffsetPoint.vy);
+                viewEl.style.transform = "translate(" + (oxp * tileSize) + "px, " + (oyp * tileSize) + "px)";
+                updateItems(dataOffsetPoint);
+                eachTile(renderTile, dataOffsetPoint);
+                self.dispatch(events.AFTER_RENDER);
+            }
         }
 
         //TODO: add items to a point on the grid.
         self.addItem = function(item, classes) {
+            if (deferred) {
+                deferred.promise.then(function() {
+                    self.addItem(item, classes);
+                });
+                return;
+            }
+            if (!classes || (classes && !(typeof classes === "string" || classes instanceof Array))) {
+                classes = item.classes;
+            }
             if (!item.el) {
                 item.el = document.createElement('div');
             }
             if (classes) {
+                if (classes.indexOf(' ') !== -1) {
+                    classes = classes.split(' ');
+                }
                 for(var i = 0; i < classes.length; i += 1) {
-                    item.el.classList.add(classes[i]);
+                    if (classes[i]) {// in case they had double spaces in a class string that got split.
+                        item.el.classList.add(classes[i]);
+                    }
                 }
             }
             item.el.style.position = 'absolute';
@@ -194,18 +261,20 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
 
         self.setTarget = function(point) {
             target = point;
+            target.el.style.zIndex = 1;
         };
 
         self.render = render;
 
         dispatcher(this);
 
-        createTiles();
+        self.load = load;
+        load(boardDataOrUrl);
     }
 
     exports.events = events;
-    exports.create = function (el, viewWidth, viewHeight, boardData, tileTypePath) {
-        return new TileGameBoard(el, viewWidth, viewHeight, boardData, tileTypePath);
+    exports.create = function (el, viewWidth, viewHeight, boardDataOrUrl, tileTypePath) {
+        return new TileGameBoard(el, viewWidth, viewHeight, boardDataOrUrl, tileTypePath);
     };
     exports.getDistance = getDistance;
     exports.getAngle = getAngle;

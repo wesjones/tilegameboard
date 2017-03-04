@@ -5,15 +5,7 @@
     <title>Tile Game Board</title>
     <link rel="stylesheet" type="text/css" href="build/tile-game-board.css">
     <script src="build/tile-game-board.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/wesjones/tilegameboard-maps/a7403471/magecity/magecity.css">
-    <style>
-        .tree-leaves-big {
-            position: absolute;
-            width: 96px;
-            height: 96px;
-            transform: translate(-64px, -64px);
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="bower_components/tilegameboard-maps/magecity/magecity.css">
 </head>
 <body>
 <a href="https://github.com/wesjones/tilegameboard">Github</a><br/>
@@ -26,27 +18,35 @@
 
 <div class="board x64"></div>
 <script>
+    function getMaxBlocks(prop) {
+        var v = Math.floor(window[prop === 'width' ? 'innerWidth' : 'innerHeight']/size);v=v%2?v:v-1;
+        return v;
+    }
+
+    var size = document.querySelector('.board').classList.contains('x64') ? 64 : 32;
+    var visibleRows = getMaxBlocks('height');// this should always be odd so the player can be in the direct center
+    var visibleCols = getMaxBlocks('width');// this should always be odd so the player can be in the direct center
 
     // these can be anything you want. They can be strings, objects, etc.
-    var boardData = [];
-    function makeBoardData() {
-        var item;
-        for (var i = 0; i < 100; i += 1) {
-            boardData.push([]);
-            for (var j = 0; j < 100; j += 1) {
-                item = {type: (i + j) % 2 ? 'a' : 'b'};
-                if (Math.round(Math.random() * 10) === 10) {
-                    item.type = 'r';
-                }
-                boardData[i].push(item);
-            }
-        }
-    }
-    makeBoardData();
+//    var boardData = [];
+//    function makeBoardData() {
+//        var item;
+//        for (var i = 0; i < 100; i += 1) {
+//            boardData.push([]);
+//            for (var j = 0; j < 100; j += 1) {
+//                item = {type: (i + j) % 2 ? 'a' : 'b'};
+//                if (Math.round(Math.random() * 10) === 10) {
+//                    item.type = 'r';
+//                }
+//                boardData[i].push(item);
+//            }
+//        }
+//    }
+//    makeBoardData();
     // the path to the value that will be added as a class of each tile is passed as the last argument
     // so in each board item it will look for the property "tile" and use that value to add classes for styling
     // to the div.
-    var board = tileBoard.create(document.querySelector('.board'), 7, 7, boardData, 'type');
+    var board = tileBoard.create(document.querySelector('.board'), visibleCols, visibleRows, "examples/map1.json", 'type');
 
     var timer, px, py, speed = 0.5;
     function start() {
@@ -89,8 +89,6 @@
     player.el.classList.add("archer");
 
     board.addItem(player);
-    board.addItem({name:'tool', x:4, y:4}, ['tool']);
-    board.addItem({name:'leaves', x:4, y:4}, ['magecity', 'tree-leaves-big', 'x64']);
     board.setTarget(player);
     board.on(tileBoard.events.BEFORE_RENDER, function(evt) {
 
@@ -116,6 +114,8 @@
             if (items[i].name === 'tool') {
                 board.removeItem(items[i]);
                 player.el.classList.add('tool');
+            } else if (items[i].classes.indexOf('doorway') !== -1 && !tileBoard.getDistance(items[i].x, items[i].y, player.x, player.y)) {
+                board.load(items[i].goto);
             }
         }
     });

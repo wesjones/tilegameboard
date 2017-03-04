@@ -1,0 +1,21 @@
+{
+  "visibleMaxWidth": 7,
+  "visibleMaxHeight": 7,
+  "startingPositions": [
+    {"x": 4, "y":7}
+  ],
+  "boardData": [
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}],
+    [{"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}, {"type":"magecity grass"}]
+  ],
+  "items": [
+    {"x": 2, "y":8, "classes":"magecity doorway-down-stone", "goto":"examples/map1.json"}
+  ]
+}
