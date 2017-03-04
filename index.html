@@ -28,27 +28,21 @@
 <script>
 
     // these can be anything you want. They can be strings, objects, etc.
-    var boardData = [
-        [{type:"magecity double roof-bamboo-top-right_sand-wall x64"}, {type:"a"}, {type:"r"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"a"}, {type:"r"}, {type:"r"}, {type:"r"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"r"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}],
-        [{type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}],
-        [{type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}, {type:"b"}, {type:"a"}]
-    ];
+    var boardData = [];
+    function makeBoardData() {
+        var item;
+        for (var i = 0; i < 100; i += 1) {
+            boardData.push([]);
+            for (var j = 0; j < 100; j += 1) {
+                item = {type: (i + j) % 2 ? 'a' : 'b'};
+                if (Math.round(Math.random() * 10) === 10) {
+                    item.type = 'r';
+                }
+                boardData[i].push(item);
+            }
+        }
+    }
+    makeBoardData();
     // the path to the value that will be added as a class of each tile is passed as the last argument
     // so in each board item it will look for the property "tile" and use that value to add classes for styling
     // to the div.
@@ -102,28 +96,20 @@
 
     });
     board.on(tileBoard.events.AFTER_KEEP_IN_BOUNDS, function(event, touchingTiles) {
-        var p, pt = {x:0, y:0, c:0};
         for(var i = 0; i < touchingTiles.length; i += 1) {
             var tile = touchingTiles[i];
             if (tile.tile.type === "r") {// we have moved into a square that is not permitted. Push away.
                 event.preventDefault();
                 return;
-//                p = tileBoard.getPointOnCircle(tile.x, tile.y, 1.01, tileBoard.getAngle(tile.x, tile.y, player.x, player.y));
-//                pt.x += p.x;
-//                pt.y += p.y;
-//                pt.c += 1;
             }
         }
-//        if (pt.c) {
-//            player.x = pt.x / pt.c;
-//            player.y = pt.y / pt.c;
-//        }
     });
     board.on(tileBoard.events.AFTER_RENDER, function(evt) {
         // do something after the render is done... pick up tools, add classes to player, etc.
+        player.el.innerHTML = player.x + 'x' + player.y;
     });
     board.on(tileBoard.events.TILE_RENDER_CHANGE, function(evt, tile, row, col) {
-        tile.el.innerHTML = 'R:' + row + " C:" + col;
+        tile.el.innerHTML = col + 'x' + row;
     });
     board.on(tileBoard.events.TOUCHING_ITEMS, function(evt, items) {
         for(var i = 0; i < items.length; i += 1) {
