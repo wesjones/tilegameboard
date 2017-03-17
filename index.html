@@ -26,26 +26,6 @@
     var size = document.querySelector('.board').classList.contains('x64') ? 64 : 32;
     var visibleRows = getMaxBlocks('height');// this should always be odd so the player can be in the direct center
     var visibleCols = getMaxBlocks('width');// this should always be odd so the player can be in the direct center
-
-    // these can be anything you want. They can be strings, objects, etc.
-//    var boardData = [];
-//    function makeBoardData() {
-//        var item;
-//        for (var i = 0; i < 100; i += 1) {
-//            boardData.push([]);
-//            for (var j = 0; j < 100; j += 1) {
-//                item = {type: (i + j) % 2 ? 'a' : 'b'};
-//                if (Math.round(Math.random() * 10) === 10) {
-//                    item.type = 'r';
-//                }
-//                boardData[i].push(item);
-//            }
-//        }
-//    }
-//    makeBoardData();
-    // the path to the value that will be added as a class of each tile is passed as the last argument
-    // so in each board item it will look for the property "tile" and use that value to add classes for styling
-    // to the div.
     var board = tileBoard.create(document.querySelector('.board'), visibleCols, visibleRows, "examples/map1.json", 'type');
 
     var timer, px, py, speed = 0.5;
@@ -96,7 +76,7 @@
     board.on(tileBoard.events.AFTER_KEEP_IN_BOUNDS, function(event, touchingTiles) {
         for(var i = 0; i < touchingTiles.length; i += 1) {
             var tile = touchingTiles[i];
-            if (tile.tile.type === "r") {// we have moved into a square that is not permitted. Push away.
+            if (tile.tile.type === "magecity sand-wall-top") {// we have moved into a square that is not permitted. Push away.
                 event.preventDefault();
                 return;
             }
@@ -114,7 +94,7 @@
             if (items[i].name === 'tool') {
                 board.removeItem(items[i]);
                 player.el.classList.add('tool');
-            } else if (items[i].classes.indexOf('doorway') !== -1 && !tileBoard.getDistance(items[i].x, items[i].y, player.x, player.y)) {
+            } else if (items[i].classes.indexOf('doorway') !== -1 && tileBoard.getDistance(items[i].x, items[i].y, player.x, player.y) < speed) {
                 board.load(items[i].goto);
             }
         }

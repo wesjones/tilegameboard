@@ -409,7 +409,7 @@
                     } else {
                         item.el.style.left = (item.x - mx + padX) * tileSize + "px";
                         item.el.style.top = (item.y - my + padY) * tileSize + "px";
-                        if (getDistance(item.x, item.y, target.x, target.y) < 1) {
+                        if (getDistance(item.x, item.y, target.x, target.y) < .9) {
                             touchingItems.push(item);
                         }
                     }
@@ -447,7 +447,7 @@
                 for (var i in points) {
                     if (points.hasOwnProperty(i)) {
                         var pt = points[i];
-                        if (boardData[pt.y] && boardData[pt.y][pt.x]) {
+                        if (boardData[pt.y] && boardData[pt.y][pt.x] && getDistance(point.x, point.y, pt.x, pt.y) < .9) {
                             pt.tile = boardData[pt.y][pt.x];
                             result.push(pt);
                         }

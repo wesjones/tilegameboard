@@ -171,7 +171,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
                     // if not in view. hide it
                     item.el.style.left = (item.x - mx + padX) * tileSize + "px";
                     item.el.style.top = (item.y - my + padY) * tileSize + "px";
-                    if (getDistance(item.x, item.y, target.x, target.y) < 1) {
+                    if (getDistance(item.x, item.y, target.x, target.y) < 0.9) {
                         touchingItems.push(item);
                     }
                 }
@@ -200,7 +200,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             for(var i in points) {
                 if (points.hasOwnProperty(i)) {
                     var pt = points[i];
-                    if (boardData[pt.y] && boardData[pt.y][pt.x]) {
+                    if (boardData[pt.y] && boardData[pt.y][pt.x] && getDistance(point.x, point.y, pt.x, pt.y) < 0.9) {
                         pt.tile = boardData[pt.y][pt.x];
                         result.push(pt);
                     }
