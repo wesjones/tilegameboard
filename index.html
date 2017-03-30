@@ -77,6 +77,7 @@
         for(var i = 0; i < touchingTiles.length; i += 1) {
             var tile = touchingTiles[i];
             if (tile.tile.type === "magecity sand-wall-top") {// we have moved into a square that is not permitted. Push away.
+                console.log(board.getTiles(player.x, player.y, 2));
                 event.preventDefault();
                 return;
             }

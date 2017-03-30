@@ -505,6 +505,33 @@
                 target = point;
                 target.el.style.zIndex = 1;
             };
+            self.getTiles = function(x, y, radius) {
+                var r2 = radius * 2 + 1;
+                var xmin = Math.floor(x - radius);
+                var ymin = Math.floor(y - radius);
+                var xmax = Math.ceil(x + radius);
+                var ymax = Math.ceil(y + radius);
+                var tiles = [];
+                for (var i = 0; i < r2; i += 1) {
+                    tiles.push([]);
+                    for (var j = 0; j < r2; j += 1) {
+                        var iy = i + ymin;
+                        var ix = j + xmin;
+                        tiles[i][j] = boardData[iy] && boardData[iy][ix];
+                    }
+                }
+                var itms = [];
+                for (i = 0; i < items.length; i += 1) {
+                    var item = items[i];
+                    if (item.x >= xmin && item.x <= xmax && item.y >= ymin && item.y <= ymax) {
+                        itms.push(item);
+                    }
+                }
+                return {
+                    tiles: tiles,
+                    items: itms
+                };
+            };
             self.render = render;
             dispatcher(this);
             self.load = load;
