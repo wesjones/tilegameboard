@@ -30,7 +30,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         var tileSize;
         var deferred;
 //TODO: needs to be external so we can switch maps
-        function load(boardDataOrUrl) {
+        function load(boardDataOrUrl, entrance) {
             deferred = defer();
             // remove all items.
             while(items.length) {
@@ -40,7 +40,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             if (typeof boardDataOrUrl === "string") {
                 http.get({url: boardDataOrUrl, success: onLoadSuccess, error: onLoadFail});
             } else {
-                onLoadSuccess({data: {boardData: boardDataOrUrl}});
+                onLoadSuccess({data: {boardData: boardDataOrUrl, entrance:entrance || 0}});
             }
         }
 
@@ -74,9 +74,9 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
                 each(response.data.items, self.addItem);
             }
             // if they don't specify a starting position that matches. then they get the first one
-            if (!matchAll(data.startingPositions, {x:target.x, y:target.y}).length) {
-                target.x = data.startingPositions[0].x;
-                target.y = data.startingPositions[0].y;
+            if (data.startingPositions.length) {
+                target.x = data.startingPositions[data.entrance].x;
+                target.y = data.startingPositions[data.entrance].y;
             }
 
             render();

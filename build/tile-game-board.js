@@ -274,7 +274,7 @@
             var ylen;
             var tileSize;
             var deferred;
-            function load(boardDataOrUrl) {
+            function load(boardDataOrUrl, entrance) {
                 deferred = defer();
                 while (items.length) {
                     self.removeItem(items[0]);
@@ -289,7 +289,8 @@
                 } else {
                     onLoadSuccess({
                         data: {
-                            boardData: boardDataOrUrl
+                            boardData: boardDataOrUrl,
+                            entrance: entrance || 0
                         }
                     });
                 }
@@ -318,12 +319,9 @@
                 if (response.data.items) {
                     each(response.data.items, self.addItem);
                 }
-                if (!matchAll(data.startingPositions, {
-                    x: target.x,
-                    y: target.y
-                }).length) {
-                    target.x = data.startingPositions[0].x;
-                    target.y = data.startingPositions[0].y;
+                if (data.startingPositions.length) {
+                    target.x = data.startingPositions[data.entrance].x;
+                    target.y = data.startingPositions[data.entrance].y;
                 }
                 render();
                 self.dispatch(events.READY);
