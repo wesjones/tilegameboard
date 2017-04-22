@@ -74,6 +74,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
                 each(response.data.items, self.addItem);
             }
             // if they don't specify a starting position that matches. then they get the first one
+            data.entrance = data.entrance || 0;
             if (data.startingPositions.length) {
                 target.x = data.startingPositions[data.entrance].x;
                 target.y = data.startingPositions[data.entrance].y;

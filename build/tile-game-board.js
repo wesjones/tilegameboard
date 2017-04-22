@@ -319,6 +319,7 @@
                 if (response.data.items) {
                     each(response.data.items, self.addItem);
                 }
+                data.entrance = data.entrance || 0;
                 if (data.startingPositions.length) {
                     target.x = data.startingPositions[data.entrance].x;
                     target.y = data.startingPositions[data.entrance].y;
