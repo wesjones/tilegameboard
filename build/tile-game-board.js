@@ -504,6 +504,12 @@
                 target = point;
                 target.el.style.zIndex = 1;
             };
+            self.getAllTiles = function() {
+                return tiles;
+            };
+            self.getAllItems = function() {
+                return items;
+            };
             self.getTiles = function(x, y, radius) {
                 var r2 = radius * 2 + 1;
                 var xmin = Math.floor(x - radius);
