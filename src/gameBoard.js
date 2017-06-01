@@ -267,7 +267,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         };
 
         self.getAllTiles = function() {
-            return tiles;
+            return boardData;
         };
 
         self.getAllItems = function() {
