@@ -320,7 +320,7 @@
                 if (rawData.items) {
                     each(rawData.items, self.addItem);
                 }
-                rawData.entrance = data.entrance || 0;
+                rawData.entrance = rawData.entrance || 0;
                 if (rawData.startingPositions.length) {
                     target.x = rawData.startingPositions[data.entrance].x;
                     target.y = rawData.startingPositions[data.entrance].y;
