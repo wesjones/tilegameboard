@@ -77,8 +77,8 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             // if they don't specify a starting position that matches. then they get the first one
             rawData.entrance = rawData.entrance || 0;
             if (rawData.startingPositions.length) {
-                target.x = rawData.startingPositions[data.entrance].x;
-                target.y = rawData.startingPositions[data.entrance].y;
+                target.x = rawData.startingPositions[rawData.entrance].x;
+                target.y = rawData.startingPositions[rawData.entrance].y;
             }
 
             render();
