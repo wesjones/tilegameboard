@@ -332,11 +332,11 @@
                 self.dispatch(events.ERROR, "Unable to load " + boardDataOrUrl);
             }
             function eachTile(fn, dataOffsetPoint) {
-                for (var x = 0; x < vw; x += 1) {
-                    tiles[x] = tiles[x] || [];
-                    for (var y = 0; y < vh; y += 1) {
-                        tiles[x][y] = tiles[x][y] || tile.create(viewEl, x, y, tileTypePath, self);
-                        fn(tiles[x][y], x, y, dataOffsetPoint);
+                for (var y = 0; y < vh; y += 1) {
+                    tiles[y] = tiles[y] || [];
+                    for (var x = 0; x < vw; x += 1) {
+                        tiles[y][x] = tiles[y][x] || tile.create(viewEl, x, y, tileTypePath, self);
+                        fn(tiles[y][x], x, y, dataOffsetPoint);
                     }
                 }
             }
