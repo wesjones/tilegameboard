@@ -56,6 +56,13 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             padY = Math.floor(vh * 0.5);
             xlen = boardData[0].length;
             ylen = boardData.length;
+            // populate x and y values on the data items.
+            for(var y = 0; y < boardData.length; y += 1) {
+                for(var x = 0; x < boardData[y].length; x += 1) {
+                    boardData[y][x].y = y;
+                    boardData[y][x].x = x;
+                }
+            }
 //TODO: clear tiles so we can switch maps.
             viewEl.innerHTML = '';
             tiles.length = 0;

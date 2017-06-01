@@ -307,6 +307,12 @@
                 padY = Math.floor(vh * .5);
                 xlen = boardData[0].length;
                 ylen = boardData.length;
+                for (var y = 0; y < boardData.length; y += 1) {
+                    for (var x = 0; x < boardData[y].length; x += 1) {
+                        boardData[y][x].y = y;
+                        boardData[y][x].x = x;
+                    }
+                }
                 viewEl.innerHTML = "";
                 tiles.length = 0;
                 eachTile(renderTile);
