@@ -506,7 +506,7 @@
                 target.el.style.zIndex = 1;
             };
             self.getAllTiles = function() {
-                return tiles;
+                return boardData;
             };
             self.getAllItems = function() {
                 return items;
