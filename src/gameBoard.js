@@ -25,6 +25,7 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         var padX;
         var padY;
         var boardData;
+        var rawData;
         var xlen;
         var ylen;
         var tileSize;
@@ -45,10 +46,10 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
         }
 
         function onLoadSuccess(response) {
-            var data = response.data;
-            boardData = data.boardData;
-            var myVW = viewWidth > data.visibleMaxWidth ? data.visibleMaxWidth : viewWidth;
-            var myVH = viewHeight > data.visibleMaxHeight ? data.visibleMaxHeight : viewHeight;
+            rawData = response.data;
+            boardData = rawData.boardData;
+            var myVW = viewWidth > rawData.visibleMaxWidth ? rawData.visibleMaxWidth : viewWidth;
+            var myVH = viewHeight > rawData.visibleMaxHeight ? rawData.visibleMaxHeight : viewHeight;
             vw = myVW + 2;
             vh = myVH + 2;
             padX = Math.floor(vw * 0.5);
@@ -70,14 +71,14 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
             deferred = null;
 
             // add items to the board.
-            if (response.data.items) {
-                each(response.data.items, self.addItem);
+            if (rawData.items) {
+                each(rawData.items, self.addItem);
             }
             // if they don't specify a starting position that matches. then they get the first one
-            data.entrance = data.entrance || 0;
-            if (data.startingPositions.length) {
-                target.x = data.startingPositions[data.entrance].x;
-                target.y = data.startingPositions[data.entrance].y;
+            rawData.entrance = data.entrance || 0;
+            if (rawData.startingPositions.length) {
+                target.x = rawData.startingPositions[data.entrance].x;
+                target.y = rawData.startingPositions[data.entrance].y;
             }
 
             render();
@@ -271,6 +272,10 @@ define('gameBoard', ['dispatcher', 'tile', 'getDistance', 'getAngle', 'getPointO
 
         self.getAllItems = function() {
             return items;
+        };
+
+        self.getRawData = function() {
+            return rawData;
         };
 
         self.getTiles = function(x, y, radius) {

@@ -270,6 +270,7 @@
             var padX;
             var padY;
             var boardData;
+            var rawData;
             var xlen;
             var ylen;
             var tileSize;
@@ -296,10 +297,10 @@
                 }
             }
             function onLoadSuccess(response) {
-                var data = response.data;
-                boardData = data.boardData;
-                var myVW = viewWidth > data.visibleMaxWidth ? data.visibleMaxWidth : viewWidth;
-                var myVH = viewHeight > data.visibleMaxHeight ? data.visibleMaxHeight : viewHeight;
+                rawData = response.data;
+                boardData = rawData.boardData;
+                var myVW = viewWidth > rawData.visibleMaxWidth ? rawData.visibleMaxWidth : viewWidth;
+                var myVH = viewHeight > rawData.visibleMaxHeight ? rawData.visibleMaxHeight : viewHeight;
                 vw = myVW + 2;
                 vh = myVH + 2;
                 padX = Math.floor(vw * .5);
@@ -316,13 +317,13 @@
                 el.style.height = myVH * tileSize + "px";
                 deferred.resolve(boardData);
                 deferred = null;
-                if (response.data.items) {
-                    each(response.data.items, self.addItem);
+                if (rawData.items) {
+                    each(rawData.items, self.addItem);
                 }
-                data.entrance = data.entrance || 0;
-                if (data.startingPositions.length) {
-                    target.x = data.startingPositions[data.entrance].x;
-                    target.y = data.startingPositions[data.entrance].y;
+                rawData.entrance = data.entrance || 0;
+                if (rawData.startingPositions.length) {
+                    target.x = rawData.startingPositions[data.entrance].x;
+                    target.y = rawData.startingPositions[data.entrance].y;
                 }
                 render();
                 self.dispatch(events.READY);
@@ -509,6 +510,9 @@
             };
             self.getAllItems = function() {
                 return items;
+            };
+            self.getRawData = function() {
+                return rawData;
             };
             self.getTiles = function(x, y, radius) {
                 var r2 = radius * 2 + 1;

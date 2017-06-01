@@ -1,6 +1,6 @@
 {
   "name": "tilegameboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creates a moving board for games.",
   "main": "index.html",
   "scripts": {
